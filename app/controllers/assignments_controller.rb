@@ -6,11 +6,15 @@ class AssignmentsController < ApplicationController
   def index
 
     #MY_ORG_CAPITALIZE = GITHUB_ORG.split('-').map { |s| s.capitalize }.join(' ')
+
     @time = Time.now
-    @client = Octokit::Client.new \
+
+    client = Octokit::Client.new \
       :login => GITHUB_USERNAME,
       :password => GITHUB_USERNAME
 
+    @assignments = client.org_repos('project-camelback', :type => 'private')
+    
     #@assignments = Assignment.all
     
   end
