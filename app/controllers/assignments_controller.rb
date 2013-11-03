@@ -13,10 +13,9 @@ class AssignmentsController < ApplicationController
       :login => GITHUB_USERNAME,
       :password => GITHUB_PWD
 
-    @assignments = client.org_repos('project-camelback')
-    #, :type => 'private'
-    
-    #@assignments = Assignment.all
+    @private_assignments = client.org_repos('flatiron-school', :type => 'private')
+    @public_assignments = client.org_repos('flatiron-school')
+    @assignments = @private_assignments + @public_assignments
     
   end
 

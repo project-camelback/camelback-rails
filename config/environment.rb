@@ -5,11 +5,11 @@ require File.expand_path('../application', __FILE__)
 # ENV_VARIABLE corresponds to what is inside the ENV block below
 
 GITHUB_USERNAME = ENV['CAMELBACK_GITHUB_USERNAME']
-GMAIL_PWD = ENV['GMAIL_PWD']
 GITHUB_PWD = ENV['CAMELBACK_GITHUB_PWD']
 GITHUB_ORG = ENV['CAMELBACK_GITHUB_ORG']
 CAMELBACK_WEB_USER = ENV['CAMELBACK_WEB_USER']
 CAMELBACK_PWD = ENV['CAMELBACK_WEB_PWD']
+GITHUB_CAMELBACK_OAUTH_CLIENT_ID = ENV['GITHUB_CAMELBACK_OAUTH_CLIENT_ID']
 
 # Initialize the Rails application.
 WebAppRails::Application.initialize!
