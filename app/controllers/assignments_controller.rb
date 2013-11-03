@@ -11,9 +11,10 @@ class AssignmentsController < ApplicationController
 
     client = Octokit::Client.new \
       :login => GITHUB_USERNAME,
-      :password => GITHUB_USERNAME
+      :password => GITHUB_PWD
 
-    @assignments = client.org_repos('project-camelback', :type => 'private')
+    @assignments = client.org_repos('project-camelback')
+    #, :type => 'private'
     
     #@assignments = Assignment.all
     

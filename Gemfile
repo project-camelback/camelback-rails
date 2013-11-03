@@ -1,23 +1,11 @@
 source 'http://rubygems.org'
 
-#DEV
-gem 'pry', :group => :development
-gem 'annotate', ">=2.5.0", :group => :development
-
-# GITHUB
-gem 'octokit'
-
 # DEFAULT GEMS
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -41,6 +29,20 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+#DEV
+gem 'pry', :group => :development
+gem 'annotate', ">=2.5.0", :group => :development
+
+# GITHUB
+gem 'octokit'
+
+#PRESENTATION
+gem 'sass-rails', '~> 4.0.0'
+gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
+gem 'compass_twitter_bootstrap'
+
+#gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
