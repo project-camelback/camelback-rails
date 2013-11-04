@@ -1,22 +1,18 @@
 <h1>My Assignments</h1>
-
+<p>your token: <%= session[:access_token] %></p>
 <p><%= "Loaded at #{@time}" %></p>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Private Assignments</th>
     </tr>
   </thead>
-   <tbody>
-<% @assignments.each do |assignment| %>
-<tr>
-        <td><a href="https://github.com/<%= assignment.full_name %>"><%= assignment.name %></a></td>
-      </tr>
-    <% end %>
+  <tbody>
+  <% @assignments.each do |assignment| %>
+    <tr>
+      <td><a href="https://github.com/<%= assignment.full_name %>"><%= assignment.name %></a></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
-<!-- <h2>Public Repos</h2>
- --><%# @client.org_repos(GITHUB_ORG, :type => 'public').each do |repo| %>
-      <%# "<a href='https://github.com/#{repo.full_name}'>#{repo.name}</a><br>" %>
-<%# end %>

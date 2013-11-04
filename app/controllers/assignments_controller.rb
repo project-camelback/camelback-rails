@@ -4,19 +4,11 @@ class AssignmentsController < ApplicationController
   # GET /assignments
   # GET /assignments.json
   def index
-
-    #MY_ORG_CAPITALIZE = GITHUB_ORG.split('-').map { |s| s.capitalize }.join(' ')
-
     @time = Time.now
-
-    client = Octokit::Client.new \
-      :login => GITHUB_USERNAME,
-      :password => GITHUB_PWD
-
+    client = Octokit::Client.new :access_token => session[:access_token]
     @private_assignments = client.org_repos('flatiron-school', :type => 'private')
     @public_assignments = client.org_repos('flatiron-school')
     @assignments = @private_assignments + @public_assignments
-    
   end
 
   # GET /assignments/1
