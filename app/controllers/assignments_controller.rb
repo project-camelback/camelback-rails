@@ -5,10 +5,10 @@ class AssignmentsController < ApplicationController
   # GET /assignments.json
   def index
     @time = Time.now
-    client = Octokit::Client.new :access_token => session[:access_token]
-    @private_assignments = client.org_repos('flatiron-school', :type => 'private')
-    @public_assignments = client.org_repos('flatiron-school')
-    @assignments = @private_assignments + @public_assignments
+    #client = Octokit::Client.new :access_token => session[:access_token]
+    #@private_assignments = client.org_repos('flatiron-school', :type => 'private')
+    #@public_assignments = client.org_repos('flatiron-school')
+    #@assignments = @private_assignments + @public_assignments
   end
 
   # GET /assignments/1

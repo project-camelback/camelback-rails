@@ -1,18 +1,36 @@
-<h1>My Assignments</h1>
-<p>your token: <%= session[:access_token] %></p>
-<p><%= "Loaded at #{@time}" %></p>
+<%# session[:access_token] %>
+<p><%# "Loaded at #{@time}" %></p>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Private Assignments</th>
+      <th>Assignments</th><th>My Work</th>
     </tr>
   </thead>
   <tbody>
-  <% @assignments.each do |assignment| %>
+   <tr><td><a href="#">Tic Tac Toe Sinatra</a></td><td><a href="#">GitHub</a></td></tr>
+   <tr><td><a href="#">Wookwoddle Rails Challenge</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Alien Sandwich Sinatra (LAB)</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Towers of Hanoi ORB (Todo)</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Recursive Recursorial</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">ABC Acme Systems Unlimited (Homework)</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+    <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+    <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+    <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  <tr><td><a href="#">Repo Name</a></td><td><a href="#">GitHub</a></td></tr>
+  
+<!--   <%# @assignments.each do |assignment| %>
     <tr>
-      <td><a href="https://github.com/<%= assignment.full_name %>"><%= assignment.name %></a></td>
+      <td><a href="https://github.com/<%# assignment.full_name %>"><%# assignment.name %></a></td>
     </tr>
-  <% end %>
+  <%# end %> -->
   </tbody>
 </table>

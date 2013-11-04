@@ -3,10 +3,16 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
-// customize bootstrap variables here:
-@import "variables";
-@import "compass_twitter_bootstrap_responsive";
-//@import "bootstrap";
+//@import "compass/reset";
+//
+// @import "compass_twitter_bootstrap";
 
-@import "compass_twitter_bootstrap_awesome";
+@import "compass";
+@import "variables";
+@import "compass_twitter_bootstrap";
+@import "compass_twitter_bootstrap_responsive";
+
+body {
+  //padding: 50px 20px;
+//  padding-top: 60px;
+}
