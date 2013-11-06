@@ -7,9 +7,9 @@
     </tr>
   </thead>
   <tbody>
-   <% @private_assignments.each do |fork| %>
+   <% @private_assignments.each do |assignment| %>
     <tr>
-      <td><%= fork.rels[:forks].get.data %></td>
+      <td><a href="https://github.com/<%= assignment.full_name%>"><%= assignment.name %></a></td>
     </tr>
   <% end %>
   </tbody>
