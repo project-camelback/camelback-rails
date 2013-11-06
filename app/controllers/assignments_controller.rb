@@ -10,9 +10,6 @@ class AssignmentsController < ApplicationController
       @private_assignments = client.org_repos('flatiron-school', :type => 'private')
       @public_assignments = client.org_repos('flatiron-school')
       @assignments = @private_assignments + @public_assignments
-      #binding.pry
-
-
     else
       redirect_to login_path
     end
