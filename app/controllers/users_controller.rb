@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   def login
     @github_login = "https://github.com/login/oauth/authorize?client_id=#{GITHUB_CAMELBACK_OAUTH_CLIENT_ID}&scope=repo,gist"
     render layout: "login"
-    #redirect_to url
   end
 
   def callback

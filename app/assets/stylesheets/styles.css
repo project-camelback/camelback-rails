@@ -7572,10 +7572,15 @@ td.visible-print {
 }
 /* line 5, ../sass/styles.scss */
 .container-top-padding {
-  padding-top: 40px;
+  padding-top: 65px;
 }
 
 /* line 9, ../sass/styles.scss */
+.table-top-padding {
+  padding-top: 20px;
+}
+
+/* line 13, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7585,7 +7590,7 @@ td.visible-print {
   text-align: center;
 }
 
-/* line 18, ../sass/styles.scss */
+/* line 22, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
 }
