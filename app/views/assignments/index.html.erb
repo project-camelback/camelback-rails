@@ -15,3 +15,18 @@
   <% end %>
   </tbody>
 </table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Forks</th>
+    </tr>
+  </thead>
+  <tbody>
+ <% @private_assignments.each do |fork| %>
+    <tr>
+      <td><%= fork.rels[:forks].get.data %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
