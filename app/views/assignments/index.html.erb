@@ -7,9 +7,9 @@
     </tr>
   </thead>
   <tbody>
-   <% @private_assignments.each do |assignment| %>
+   <% @assignments.each do |assignment| %>
     <tr>
-      <td><a href="https://github.com/<%= assignment.full_name%>"><%= assignment.name %></a></td>
+      <td><a href="<%= assignment.url %>" target="_blank"><%= assignment.title %></a></td>
     </tr>
   <% end %>
   </tbody>
