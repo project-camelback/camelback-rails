@@ -1,14 +1,63 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Assignments</title>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
 
-<%= yield %>
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
-</body>
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Homeworker" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="fixed">
+      <nav class="top-bar">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#" title="">Homeworker</a></h1>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  <section class="main">
+  <header class="show-for-small">
+    <!-- mobile stuff --> <h4>Test</h4>
+  </header><!-- /header -->
+  <div class="row">
+    <div class="large-12 columns">
+   <!-- <dl class="sub-nav">
+    <dt>Filter:</dt>
+    <dd class="active"><a href="#">All</a></dd>
+    <dd><a href="#">Active</a></dd>
+    <dd><a href="#">Pending</a></dd>
+    <dd><a href="#">Suspended</a></dd>
+  </dl> -->
+    </div>
+
+</div>
+
+  <div class="row">
+        <div class="large-12 columns">
+       
+          <!-- <h1 class="docs header"><a href="http://foundation.zurb.com/docs/">Foundation 4 Documentation</a></h1>
+          <h6 class="docs subheader"><a href="http://foundation.zurb.com/old-docs/f3">Want F3 Docs?</a></h6>
+          <hr> -->
+          <%= yield %>
+        </div>
+      </div> 
+  </section>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>

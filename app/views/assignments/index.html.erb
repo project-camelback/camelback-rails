@@ -1,29 +1,13 @@
 <h1>My Assignments</h1>
 <p><%= "Loaded at #{@time}" %></p>
-
 <table>
   <thead>
     <tr>
-      <th>All Assignments</th>
+      <th>Assignments</th><th>Forks</th>
     </tr>
   </thead>
   <tbody>
-  <% @assignments.each do |assignment| %>
-    <tr>
-      <td><a href="https://github.com/<%= assignment.full_name %>"><%= assignment.name %></a></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Forks</th>
-    </tr>
-  </thead>
-  <tbody>
- <% @private_assignments.each do |fork| %>
+   <% @private_assignments.each do |fork| %>
     <tr>
       <td><%= fork.rels[:forks].get.data %></td>
     </tr>

@@ -1,6 +1,4 @@
 source 'http://rubygems.org'
-
-
 ruby "2.0.0" # Heroku demands ruby 2.0.0
 
 gem 'rails', '4.0.0'
@@ -11,13 +9,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'octokit'
 gem 'rest-client'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
-
+gem 'sass-rails', '~> 4.0.0'
+gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
+gem 'zurb-foundation', '~> 4.0.0', :group => :assets
+gem 'pry', :group => :development
+gem 'annotate', ">=2.5.0", :group => :development
 
 group :development do
   gem 'sqlite3'
@@ -26,25 +22,12 @@ group :development do
   #gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 end
 
-gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
-gem 'compass_twitter_bootstrap'
-gem 'sass-rails', '~> 4.0.0'
-
 group :production do
   gem 'rails_12factor'
-  # Use PostgreSQL. Heroku requires it
-  gem 'pg'
+  gem 'pg' # Use PostgreSQL. Heroku requires it
 end
 
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
