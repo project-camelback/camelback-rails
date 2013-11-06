@@ -1,57 +1,41 @@
 source 'http://rubygems.org'
 
-# DEFAULT GEMS
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
+ruby "2.0.0" # Heroku demands ruby 2.0.0
+
 gem 'rails', '4.0.0'
-
-
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'octokit'
+gem 'rest-client'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-#PROD
+
+
+group :development do
+  gem 'sqlite3'
+  gem 'pry'
+  gem 'annotate', ">=2.5.0" 
+  #gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
+end
+
+gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
+gem 'compass_twitter_bootstrap'
+gem 'sass-rails', '~> 4.0.0'
+
 group :production do
   gem 'rails_12factor'
   # Use PostgreSQL. Heroku requires it
   gem 'pg'
 end
 
-#DEV
-group :development do
-  gem 'pry'
-  gem 'annotate', ">=2.5.0"
-end
-
-# GITHUB
-gem 'octokit'
-
-#PRESENTATION
-gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
-gem 'compass_twitter_bootstrap'
-
-gem 'rest-client'
-
-#gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -64,6 +48,3 @@ gem 'rest-client'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-# Heroku demands ruby 2.0.0
-ruby "2.0.0"

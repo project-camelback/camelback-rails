@@ -1,6 +1,5 @@
 WebAppRails::Application.routes.draw do
   resources :users
-
   resources :assignments
 
   root :to => 'assignments#index'
