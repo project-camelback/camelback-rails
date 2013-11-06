@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 <head>
+  <title>Welcome to Homeworker</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
- <title><%= content_for?(:title) ? yield(:title) : "Homeworker" %></title>
- <%= stylesheet_link_tag    "application" %>
- <%= javascript_include_tag "vendor/custom.modernizr" %>
- <%= csrf_meta_tags %>
- </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
 <body>
-  <div class="fixed">
-    <nav class="top-bar">
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#" title="">Homeworker</a></h1>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <section class="main">
-    <div class="row">
-      <div class="large-12 columns">
-        <%= yield %>
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Homeworker</a>
+        </div><!--/.navbar-header -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Anders Ramsay <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
       </div>
-    </div> 
-  </section>
-  <%= javascript_include_tag "application" %>
+    </nav>
+  </header>
+
+  <div class="container container-top-padding">
+      <div class="row">
+        <div class="col-md-12">
+          <%= yield %>
+        </div>
+      </div>
+    <hr>
+
+    <footer>
+      <p>&copy; Company 2013</p>
+    </footer>
+  </div> <!-- /container -->
 </body>
 </html>
