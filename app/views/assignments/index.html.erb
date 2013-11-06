@@ -1,16 +1,16 @@
 <h1>My Assignments</h1>
-<p><%= "Loaded at #{@time}" %></p>
-<table>
-  <thead>
-    <tr>
-      <th>Assignments</th><th>Forks</th>
-    </tr>
-  </thead>
-  <tbody>
-   <% @assignments.each do |assignment| %>
-    <tr>
-      <td><a href="<%= assignment.url %>" target="_blank"><%= assignment.title %></a></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+  <p><%= "Loaded at #{@time}" %></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Assignments</th><th>Forks</th>
+      </tr>
+    </thead>
+    <tbody>
+     <% @assignments.each do |assignment| %>
+      <tr>
+        <td><a href="<%= assignment.url %>" target="_blank"><%= assignment.title %></a></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>

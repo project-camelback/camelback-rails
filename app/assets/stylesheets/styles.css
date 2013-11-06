@@ -7574,3 +7574,18 @@ td.visible-print {
 .container-top-padding {
   padding-top: 40px;
 }
+
+/* line 9, ../sass/styles.scss */
+.centered {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -100px;
+  text-align: center;
+}
+
+/* line 18, ../sass/styles.scss */
+.login-button {
+  max-width: 200px;
+}
