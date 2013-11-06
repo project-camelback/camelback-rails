@@ -22,6 +22,10 @@ group :development do
   #gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 end
 
+group :test do
+  gem 'sqlite3'
+end
+
 group :production do
   gem 'rails_12factor'
   gem 'pg' # Use PostgreSQL. Heroku requires it

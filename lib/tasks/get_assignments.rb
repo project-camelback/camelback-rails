@@ -30,13 +30,30 @@ class GetAssignments
 
   def insert_assignments
     assignments.each do |assignment|
-      Assignment.create(:title => assignment.name, :url => repo_url(assignment.full_name))
+      a = Assignment.create(
+        :name => assignment.name,
+        :full_name => assignment.full_name,
+        :url => repo_url(assignment.full_name))
       puts "Saving #{assignment.name}."
+      insert_forks(a)
     end
   end
 
   def repo_url(full_name)
     "https://github.com/#{full_name}"
+  end
+
+  def insert_forks(assignment)
+    forks_array = client.forks(assignment.full_name)
+    forks_array.each do |fork|
+      s = Student.find_or_create_by(:name => fork.owner.login)
+      h = Homework.create({
+        :full_name => fork.full_name,
+        :student_id => s.id,
+        :assignment_id => assignment.id
+      })
+      puts "  Saving #{h.full_name}."
+    end
   end
 end
 

@@ -11,11 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106144708) do
+ActiveRecord::Schema.define(version: 20131106223114) do
 
   create_table "assignments", force: true do |t|
-    t.string   "title"
+    t.string   "name"
+    t.string   "full_name"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "homeworks", force: true do |t|
+    t.integer  "student_id"
+    t.integer  "assignment_id"
+    t.string   "name"
+    t.string   "full_name"
+    t.string   "web_url"
+    t.string   "clone_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,7 +37,9 @@ ActiveRecord::Schema.define(version: 20131106144708) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "students", force: true do |t|
+    t.string   "name"
+    t.datetime "last_login"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
