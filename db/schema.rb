@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(version: 20131106223114) do
 
   create_table "assignments", force: true do |t|
-    t.string   "name"
-    t.string   "full_name"
+    t.string   "title"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,6 +39,11 @@ ActiveRecord::Schema.define(version: 20131106223114) do
   create_table "students", force: true do |t|
     t.string   "name"
     t.datetime "last_login"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
