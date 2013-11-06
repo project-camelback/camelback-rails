@@ -1,0 +1,25 @@
+<h1>My Work</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mockups.each do |mockup| %>
+      <tr>
+        <td><%= link_to 'Show', mockup %></td>
+        <td><%= link_to 'Edit', edit_mockup_path(mockup) %></td>
+        <td><%= link_to 'Destroy', mockup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mockup', new_mockup_path %>

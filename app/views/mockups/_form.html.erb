@@ -1,0 +1,17 @@
+<%= form_for(@mockup) do |f| %>
+  <% if @mockup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mockup.errors.count, "error") %> prohibited this mockup from being saved:</h2>
+
+      <ul>
+      <% @mockup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

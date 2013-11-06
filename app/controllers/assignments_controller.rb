@@ -4,16 +4,15 @@ class AssignmentsController < ApplicationController
   # GET /assignments
   # GET /assignments.json
   def index
-    #binding.pry
     @time = Time.now
-    #client = Octokit::Client.new :access_token => session[:access_token]
-    # if client.user_authenticated?
-    #   @private_assignments = client.org_repos('flatiron-school', :type => 'private')
-    #   @public_assignments = client.org_repos('flatiron-school')
-    #   @assignments = @private_assignments + @public_assignments
-    # else
-    #   redirect_to login_path
-    # end
+    client = Octokit::Client.new :access_token => session[:access_token]
+    if client.user_authenticated?
+      @private_assignments = client.org_repos('flatiron-school', :type => 'private')
+      @public_assignments = client.org_repos('flatiron-school')
+      @assignments = @private_assignments + @public_assignments
+    else
+      redirect_to login_path
+    end
   end
 
   # GET /assignments/1
