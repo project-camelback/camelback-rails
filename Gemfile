@@ -4,8 +4,8 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use PostgreSQL. Heroku requires it.
+gem 'pg'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -30,9 +30,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#PROD
+group :production do
+  gem 'rails_12factor'
+end
+
 #DEV
-gem 'pry', :group => :development
-gem 'annotate', ">=2.5.0", :group => :development
+group :development do
+  gem 'pry'
+  gem 'annotate', ">=2.5.0"
+end
 
 # GITHUB
 gem 'octokit'
@@ -57,3 +64,6 @@ gem 'rest-client'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Heroku demands ruby 2.0.0
+ruby "2.0.0"
