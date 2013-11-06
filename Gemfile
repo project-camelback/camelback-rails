@@ -33,6 +33,8 @@ end
 #PROD
 group :production do
   gem 'rails_12factor'
+  # Use PostgreSQL. Heroku requires it
+  gem 'pg'
 end
 
 #DEV
