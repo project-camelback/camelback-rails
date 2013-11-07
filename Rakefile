@@ -15,3 +15,11 @@ task :assignments => :environment do
   getter = GetAssignments.new
   getter.call
 end
+
+desc "Show homeworks_of [student_github_login]"
+task :homeworks_of, [:student] => :environment do |t, args|
+  require "./lib/tasks/student_homeworks"
+  puts "Searching for #{args.student}..."
+  query = StudentHomeworks.new(args.student)
+  query.call
+end
