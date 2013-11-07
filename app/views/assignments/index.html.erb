@@ -24,22 +24,20 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Assignments</th>
-          <th>Forks</th>
+          <th>Assignment</th>
           <th>Tests</th>
           <th>Progress</th>
-          <th>Issues</th>
-          <th>Tags</th>
+          <th><!-- Issues --><span class="glyphicon glyphicon-comment"></span></th>
+          <th><!-- Tags --><span class="glyphicon glyphicon-tags"></span></th>
         </tr>
       </thead>
       <tbody>
         <% @assignments.each do |assignment| %>
         <tr>
           <td><%= link_to assignment.name, assignment.url %></td>
-          <td>[Link to my fork]</td>
           <td>[Tests]</td>
           <td><div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
               In Progress <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
@@ -57,8 +55,7 @@
 
       
       <tr>
-        <td><a href="#" title="">Halloween App Redux</a></td>
-        <td><button type="button" class="btn btn-default">Fork</button></td>
+        <td><a href="#" title="">Halloween App Redux</a> <button type="button" class="btn btn-default btn-xs">Fork</button></td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -67,15 +64,17 @@
 
 
       <tr>
-        <td><a href="#" title="">Halloween App Redux</a></td>
-        <td>[Link to my fork]</td>
+        <td><a href="#" title="">Pollywog (Big Swamp Edition)</a>
+        <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-info-sign"></span></button>
+
+        </td>
         <td><a href="#" title=""><div class="progress">
           <div class="progress-bar progress-bar-success" style="width: 100%">
             <span class="sr-only">100% Complete (success)</span>
           </div></a>
         </div></td>
         <td><div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
             In Progress <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">
@@ -91,8 +90,7 @@
 
 
       <tr>
-        <td><a href="#" title="">Assignment Name</a></td>
-        <td>[Link to my fork]</td>
+        <td><a href="#" title="">Assignment Name</a> <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-info-sign"></span></button></td>
         <td><a href="#" title="" class="progress-button"><div class="progress">
           <div class="progress-bar progress-bar-success" style="width: 70%">
             <span class="sr-only">70% Pending (success)</span>
@@ -103,7 +101,7 @@
         </div></td>
         <td>
          <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
             In Progress <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">
@@ -119,17 +117,16 @@
     </tr>
     <tr>
       <td><a href="#" title="">Assignment Name</a></td>
-      <td>[Link to my fork]</td>
       <td><a href="#" title="" class="progress-button"><div class="progress">
         <div class="progress-bar progress-bar-success" style="width: 5%">
           <span class="sr-only">0% Passing (success)</span>
-        </div>
+          </div>
         <div class="progress-bar progress-bar-danger" style="width: 95%">
           <span class="sr-only">100% Failing (danger)</span>
-        </div>
+          </div>
       </div></a></td>
       <td><div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
           In Progress <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
@@ -145,17 +142,16 @@
   </tr>
   <tr>
     <td><a href="#" title="">Assignment Name</a></td>
-    <td>[Link to my fork]</td>
     <td><a href="#" title="" class="progress-button"><div class="progress">
       <div class="progress-bar progress-bar-success" style="width: 70%">
         <span class="sr-only">70% Pending (success)</span>
-      </div>
+        </div>
       <div class="progress-bar progress-bar-danger" style="width: 30%">
         <span class="sr-only">30% Faling (danger)</span>
-      </div>
+        </div>
     </div></a></td>
     <td><div class="btn-group">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
         In Progress <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
@@ -170,17 +166,16 @@
   <td><span class="label label-default"><a href="#" title="">Rails</a></span> <span class="label label-default"><a href="#" title="">SQL</a></span></td>
 </tr>         <tr>
 <td><a href="#" title="">Assignment Name</a></td>
-<td>[Link to my fork]</td>
 <td><a href="#" title="" class="progress-button"><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">70% Pending (success)</span>
-  </div>
+    </div>
   <div class="progress-bar progress-bar-danger" style="width: 100%">
     <span class="sr-only">30% Faling (danger)</span>
-  </div>
+    </div>
 </div></a></td>
 <td><div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
     In Progress <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -196,17 +191,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 20%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 80%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -222,17 +216,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 5%">
       <span class="sr-only">0% Passing (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 95%">
       <span class="sr-only">100% Failing (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -248,17 +241,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 70%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 30%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -273,17 +265,16 @@
 <td><span class="label label-default"><a href="#" title="">Rails</a></span> <span class="label label-default"><a href="#" title="">SQL</a></span> <span class="label label-default"><a href="#" title="">ORM</a></span></td>
 </tr>         <tr>
 <td><a href="#" title="">Assignment Name</a></td>
-<td>[Link to my fork]</td>
 <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">70% Pending (success)</span>
-  </div>
+    </div>
   <div class="progress-bar progress-bar-danger" style="width: 100%">
     <span class="sr-only">30% Faling (danger)</span>
-  </div>
+    </div>
 </div></td>
 <td><div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
     In Progress <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -299,17 +290,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 20%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 80%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -325,17 +315,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 5%">
       <span class="sr-only">0% Passing (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 95%">
       <span class="sr-only">100% Failing (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -351,17 +340,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 70%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 30%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -376,17 +364,16 @@
 <td><span class="label label-default"><a href="#" title="">Rails</a></span> <span class="label label-default"><a href="#" title="">SQL</a></span> <span class="label label-default"><a href="#" title="">ORM</a></span></td>
 </tr>         <tr>
 <td><a href="#" title="">Assignment Name</a></td>
-<td>[Link to my fork]</td>
 <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">70% Pending (success)</span>
-  </div>
+    </div>
   <div class="progress-bar progress-bar-danger" style="width: 100%">
     <span class="sr-only">30% Faling (danger)</span>
-  </div>
+    </div>
 </div></td>
 <td><div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
     In Progress <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -402,17 +389,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 20%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 80%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -428,17 +414,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 5%">
       <span class="sr-only">0% Passing (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 95%">
       <span class="sr-only">100% Failing (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -454,17 +439,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 70%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 30%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -479,17 +463,16 @@
 <td><span class="label label-default"><a href="#" title="">Rails</a></span> <span class="label label-default"><a href="#" title="">SQL</a></span> <span class="label label-default"><a href="#" title="">ORM</a></span></td>
 </tr>         <tr>
 <td><a href="#" title="">Assignment Name</a></td>
-<td>[Link to my fork]</td>
 <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">70% Pending (success)</span>
-  </div>
+    </div>
   <div class="progress-bar progress-bar-danger" style="width: 100%">
     <span class="sr-only">30% Faling (danger)</span>
-  </div>
+    </div>
 </div></td>
 <td><div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
     In Progress <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -505,17 +488,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 20%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 80%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -531,17 +513,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 5%">
       <span class="sr-only">0% Passing (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 95%">
       <span class="sr-only">100% Failing (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -557,17 +538,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 70%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 30%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -582,17 +562,16 @@
 <td><span class="label label-default"><a href="#" title="">Rails</a></span> <span class="label label-default"><a href="#" title="">SQL</a></span> <span class="label label-default"><a href="#" title="">ORM</a></span></td>
 </tr>         <tr>
 <td><a href="#" title="">Assignment Name</a></td>
-<td>[Link to my fork]</td>
 <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">70% Pending (success)</span>
-  </div>
+    </div>
   <div class="progress-bar progress-bar-danger" style="width: 100%">
     <span class="sr-only">30% Faling (danger)</span>
-  </div>
+    </div>
 </div></td>
 <td><div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
     In Progress <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -608,17 +587,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 20%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 80%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -634,17 +612,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 5%">
       <span class="sr-only">0% Passing (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 95%">
       <span class="sr-only">100% Failing (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -660,17 +637,16 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 70%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 30%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
       In Progress <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
@@ -685,17 +661,16 @@
 <td><span class="label label-default"><a href="#" title="">Rails</a></span> <span class="label label-default"><a href="#" title="">SQL</a></span> <span class="label label-default"><a href="#" title="">ORM</a></span></td>
 </tr>         <tr>
 <td><a href="#" title="">Assignment Name</a></td>
-<td>[Link to my fork]</td>
 <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">70% Pending (success)</span>
-  </div>
+    </div>
   <div class="progress-bar progress-bar-danger" style="width: 100%">
     <span class="sr-only">30% Faling (danger)</span>
-  </div>
+    </div>
 </div></td>
 <td><div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
     In Progress <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -711,14 +686,13 @@
 </tr>
 <tr>
   <td><a href="#" title="">Assignment Name</a></td>
-  <td>[Link to my fork]</td>
   <td><div class="progress">
     <div class="progress-bar progress-bar-success" style="width: 20%">
       <span class="sr-only">70% Pending (success)</span>
-    </div>
+      </div>
     <div class="progress-bar progress-bar-danger" style="width: 80%">
       <span class="sr-only">30% Faling (danger)</span>
-    </div>
+      </div>
   </div></td>
   <td><select class="form-control">
     <option selected>Not Started</option>
