@@ -38,13 +38,24 @@
             <td><%= link_to assignment.name, assignment.url %></td>
             <td>[Link to my fork]</td>
             <td>[Tests]</td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
         <% end %>
            <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Halloween App Redux</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 100%">
@@ -57,12 +68,22 @@
     <span class="sr-only">10% Complete (danger)</span>
   </div> -->
 </div></td>
-            <td>[Progress</td>
-            <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div></td>
+            <td></td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -72,12 +93,24 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td>
+             <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">Lab</a></span></td>
           </tr>
                    <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 5%">
@@ -87,12 +120,18 @@
     <span class="sr-only">100% Failing (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><select class="form-control">
+  <option selected>Not Started</option>
+  <option>In Progress</option>
+  <option>Stuck</option>
+  <option>Done</option>
+</select>
+</td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Sinatra</a></span> <span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -102,11 +141,22 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span></td>
           </tr>         <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -116,12 +166,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Sinatra</a></span> <span class="label label-info"><a href="#" title="">Quiz</a></span> <span class="label label-info"><a href="#" title="">Hashes</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 20%">
@@ -131,12 +192,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Homework</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 5%">
@@ -146,12 +218,23 @@
     <span class="sr-only">100% Failing (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">Lab</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -161,11 +244,22 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>         <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -175,12 +269,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 20%">
@@ -190,12 +295,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 5%">
@@ -205,12 +321,23 @@
     <span class="sr-only">100% Failing (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -220,11 +347,22 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>         <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -234,12 +372,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 20%">
@@ -249,12 +398,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 5%">
@@ -264,12 +424,23 @@
     <span class="sr-only">100% Failing (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -279,11 +450,22 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>         <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -293,12 +475,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 20%">
@@ -308,12 +501,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 5%">
@@ -323,12 +527,23 @@
     <span class="sr-only">100% Failing (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -338,11 +553,22 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>         <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -352,12 +578,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 20%">
@@ -367,12 +604,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 5%">
@@ -382,12 +630,23 @@
     <span class="sr-only">100% Failing (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 70%">
@@ -397,11 +656,22 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>         <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -411,12 +681,23 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
              <tr>
-            <td>[assignment title]</td>
+            <td><a href="#" title="">Assignment Name</a></td>
             <td>[Link to my fork]</td>
             <td><div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 20%">
@@ -426,9 +707,20 @@
     <span class="sr-only">30% Faling (danger)</span>
   </div>
 </div></td>
-            <td>[Progress]</td>
+            <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    In Progress <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">In Progress</a></li>
+    <li><a href="#">Not Started</a></li>
+    <li><a href="#">Stuck</a></li>
+    <li><a href="#">Done</a></li>
+  </ul>
+</div>
+</td></td>
             <td>[Issues]</td>
-            <td>[Tags]</td>
+            <td><span class="label label-info"><a href="#" title="">Rails</a></span> <span class="label label-info"><a href="#" title="">SQL</a></span> <span class="label label-info"><a href="#" title="">ORM</a></span></td>
           </tr>
       </tbody>
     </table>

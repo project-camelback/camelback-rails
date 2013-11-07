@@ -7594,3 +7594,9 @@ td.visible-print {
 .login-button {
   max-width: 200px;
 }
+
+/* line 26, ../sass/styles.scss */
+span.badge a, span.label a {
+  color: #ffffff;
+  font-weight: 300;
+}
