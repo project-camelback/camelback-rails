@@ -7570,17 +7570,17 @@ td.visible-print {
     display: none !important;
   }
 }
-/* line 5, ../sass/styles.scss */
+/* line 6, ../sass/styles.scss */
 .container-top-padding {
   padding-top: 65px;
 }
 
-/* line 9, ../sass/styles.scss */
+/* line 10, ../sass/styles.scss */
 .table-top-padding {
   padding-top: 20px;
 }
 
-/* line 13, ../sass/styles.scss */
+/* line 14, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7590,13 +7590,38 @@ td.visible-print {
   text-align: center;
 }
 
-/* line 22, ../sass/styles.scss */
+/* line 23, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 27, ../sass/styles.scss */
 span.badge a, span.label a {
   color: #ffffff;
   font-weight: 300;
+}
+
+/* line 33, ../sass/styles.scss */
+.issue {
+  color: #b4b1ab;
+  font-size: 10px;
+  line-height: 3px;
+}
+
+/* line 40, ../sass/styles.scss */
+.nav-btn-group {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: smaller;
+}
+
+/* line 46, ../sass/styles.scss */
+.nav-btn-group .navbar-form {
+  margin-top: -1px;
+  margin-left: 10px;
+}
+/* line 50, ../sass/styles.scss */
+.nav-btn-group .navbar-form input {
+  font-size: 14px;
+  padding: 0px 8px;
 }

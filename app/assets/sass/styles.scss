@@ -1,6 +1,7 @@
 // customize bootstrap variables here:
 @import "variables";
 @import "bootstrap";
+// @import "compass/css3/box-shadow";
 
 .container-top-padding {
   padding-top:65px;
@@ -28,3 +29,33 @@ span.badge a, span.label a  {
   font-weight: 300;
   //font-size: smaller;
 }
+
+.issue {
+  color:#b4b1ab;
+  font-size:10px;
+  //font-style: italic;
+  line-height:3px;
+}
+
+.nav-btn-group {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size:smaller;
+}
+
+.nav-btn-group .navbar-form {
+  margin-top: -1px;
+  margin-left: 10px;
+
+   & input {
+    font-size: 14px;
+    padding: 0px 8px;
+   }
+}
+
+// .progress-link:hover {
+// //  border: 2px solid #83a5e0;
+// //text-decoration: underline;
+//  @include single-box-shadow;
+
+// }
