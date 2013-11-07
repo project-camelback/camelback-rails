@@ -28,6 +28,16 @@ class GetAssignments
     @client.org_repos('flatiron-school', :type => 'private')
   end
 
+  def create_tags(assignment)
+    scrape_url = assignment.make_scrape_url
+    scrape(scrape_url) if scrape_url
+    
+  end
+
+  def scrape(scrape_url)
+    readme_page = Nokogiri::HTML(open(scrape_url))
+  end
+
   def insert_assignments
     assignments.each do |assignment|
       a = Assignment.create(
@@ -36,6 +46,11 @@ class GetAssignments
         :url => repo_url(assignment.full_name))
       puts "Saving #{assignment.name}."
       insert_forks(a)
+      
+      tags_to_generate = create_tags(a)
+
+      # a.tag_list.add(generate_tags())
+      a.save
     end
   end
 
