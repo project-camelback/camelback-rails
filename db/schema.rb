@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(version: 20131106231960) do
 
   create_table "assignments", force: true do |t|
-    t.string   "name"
-    t.string   "full_name"
+    t.string   "title"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 20131106231960) do
 
   create_table "tags", force: true do |t|
     t.string "name"
+
   end
 
 end
