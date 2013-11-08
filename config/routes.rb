@@ -9,6 +9,8 @@ WebAppRails::Application.routes.draw do
   # get 'github-oauth' => 'assignments#index'
   get 'callback' => 'users#callback'
   # get 'github-oauth' => 'assignments#index'
+  
+  get 'update_rspec' => 'assignments#update_rspec'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

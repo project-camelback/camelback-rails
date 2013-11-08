@@ -17,7 +17,7 @@
 class Assignment < ActiveRecord::Base
   has_many :homeworks
   has_many :students, through: :homeworks
-  one_to_many :assignment_submissions
+  has_many :assignment_submissions
 
   def pull_submissions
     github_fork = GithubForks.new(self.url)

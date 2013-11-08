@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108200321) do
+ActiveRecord::Schema.define(version: 20131108202148) do
+
+  create_table "assignment_submissions", force: true do |t|
+    t.integer  "student_id"
+    t.integer  "assignment_id"
+    t.datetime "evaluation_date"
+    t.boolean  "evaluated",            default: false
+    t.integer  "passes",               default: 0
+    t.integer  "pendings",             default: 0
+    t.integer  "failures",             default: 0
+    t.integer  "examples",             default: 0
+    t.string   "failure_descriptions"
+    t.string   "teacher_comments"
+    t.string   "url"
+  end
 
   create_table "assignments", force: true do |t|
     t.string   "title"

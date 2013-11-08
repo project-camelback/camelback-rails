@@ -1,5 +1,5 @@
 class AssignmentsController < ApplicationController
-  before_action :set_assignment, only: [:show, :edit, :update, :destroy]
+  before_action :set_assignment, only: [:show, :edit, :update, :destroy, :update_rspec]
 
   # GET /assignments
   # GET /assignments.json
@@ -19,6 +19,10 @@ class AssignmentsController < ApplicationController
   # GET /assignments/1
   # GET /assignments/1.json
   def show
+  end
+
+  def update_rspec
+    @assignment.pull_submissions
   end
 
   # GET /assignments/new
