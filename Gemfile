@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'octokit'
+gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 gem 'rest-client'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
