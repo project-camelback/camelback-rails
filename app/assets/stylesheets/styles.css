@@ -7570,17 +7570,117 @@ td.visible-print {
     display: none !important;
   }
 }
-/* line 6, ../sass/styles.scss */
+/* line 12, ../sass/styles.scss */
 .container-top-padding {
   padding-top: 65px;
 }
 
-/* line 10, ../sass/styles.scss */
+/* line 19, ../sass/styles.scss */
+.nav-btn-group {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: smaller;
+}
+/* line 24, ../sass/styles.scss */
+.nav-btn-group .navbar-form {
+  margin-top: -1px;
+  margin-left: 10px;
+}
+/* line 28, ../sass/styles.scss */
+.nav-btn-group .navbar-form input {
+  font-size: 14px;
+  padding: 0px 8px;
+}
+
+/* line 38, ../sass/styles.scss */
+table.table tbody td {
+  vertical-align: middle;
+}
+/* line 41, ../sass/styles.scss */
+table.table tbody td .progress {
+  margin-bottom: 0;
+}
+
+/* line 48, ../sass/styles.scss */
+.assignments-list h2 {
+  font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+/* line 54, ../sass/styles.scss */
 .table-top-padding {
   padding-top: 20px;
 }
 
-/* line 14, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
+.issue {
+  color: #b4b1ab;
+  font-size: 10px;
+  line-height: 3px;
+}
+
+/* line 64, ../sass/styles.scss */
+ul.meta-info {
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 69, ../sass/styles.scss */
+ul.meta-info li {
+  display: inline;
+  font-size: 10px;
+  color: #b1b4b0;
+  margin-right: 3px;
+}
+/* line 75, ../sass/styles.scss */
+ul.meta-info li img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 78, ../sass/styles.scss */
+ul.meta-info li a {
+  color: #b1b4b0;
+}
+/* line 81, ../sass/styles.scss */
+ul.meta-info li span.badge a, ul.meta-info li span.label a {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/* line 88, ../sass/styles.scss */
+.editable_area {
+  padding: 5px;
+  border: 1px solid #e8ebeb;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #b1b4b0;
+  font-size: 10px;
+}
+/* line 95, ../sass/styles.scss */
+.editable_area:hover {
+  cursor: pointer;
+  background-color: #f2f5f5;
+}
+
+/* line 101, ../sass/styles.scss */
+.status {
+  color: #b1b4b0;
+  font-size: 12px;
+}
+
+/* line 106, ../sass/styles.scss */
+.align-middle {
+  vertical-align: middle;
+}
+
+/* line 113, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7590,38 +7690,7 @@ td.visible-print {
   text-align: center;
 }
 
-/* line 23, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
-}
-
-/* line 27, ../sass/styles.scss */
-span.badge a, span.label a {
-  color: #ffffff;
-  font-weight: 300;
-}
-
-/* line 33, ../sass/styles.scss */
-.issue {
-  color: #b4b1ab;
-  font-size: 10px;
-  line-height: 3px;
-}
-
-/* line 40, ../sass/styles.scss */
-.nav-btn-group {
-  margin-left: 10px;
-  margin-top: 10px;
-  font-size: smaller;
-}
-
-/* line 46, ../sass/styles.scss */
-.nav-btn-group .navbar-form {
-  margin-top: -1px;
-  margin-left: 10px;
-}
-/* line 50, ../sass/styles.scss */
-.nav-btn-group .navbar-form input {
-  font-size: 14px;
-  padding: 0px 8px;
 }
