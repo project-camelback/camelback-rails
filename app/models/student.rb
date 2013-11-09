@@ -22,6 +22,6 @@
 class Student < ActiveRecord::Base
   has_many :homeworks
   has_many :assignments, through: :homeworks
-  one_to_many :assignment_submissions
+  has_many :assignment_submissions
 
 end

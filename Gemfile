@@ -14,6 +14,7 @@ gem 'rest-client'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
 gem 'bootstrap-sass', '~> 3.0.1.0.rc'
+gem 'griddler'
 
 group :development do
   gem 'sqlite3'

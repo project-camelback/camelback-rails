@@ -10,6 +10,15 @@ WebAppRails::Application.routes.draw do
   get 'callback' => 'users#callback'
   # get 'github-oauth' => 'assignments#index'
 
+  # mount using default path
+  # mount_griddler
+
+  # mount using a custom path
+  # mount_griddler('/email/incoming')
+
+  # the "get off my lawn", DIY approach:
+  # post '/email_processor' => 'griddler/emails#create'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
