@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131108224413) do
 
   create_table "assignments", force: true do |t|
@@ -19,6 +20,11 @@ ActiveRecord::Schema.define(version: 20131108224413) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
+    t.datetime "post_date"
+    t.datetime "due_date"
+    t.string   "evaluation_type"
+    t.string   "branch"
   end
 
   create_table "homeworks", force: true do |t|
@@ -42,6 +48,16 @@ ActiveRecord::Schema.define(version: 20131108224413) do
     t.datetime "last_login"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "github_username"
+    t.string   "semester"
+    t.integer  "student_id"
+    t.integer  "assignment_id"
+    t.string   "full_name"
+    t.string   "web_url"
+    t.string   "clone_url"
   end
 
   create_table "users", force: true do |t|

@@ -34,12 +34,19 @@ $light-gray: #b1b4b0;
 
 // ASSIGNMENTS VIEW
 // ----------------------------
-table.table tbody {
-  td {
-    vertical-align: middle;
-
-    .progress {
-      margin-bottom: 0;
+table.table {
+  thead {
+    th {
+      color:$light-gray;
+      font-weight: 300;
+    }
+  }
+  tbody {
+    td {
+      vertical-align: middle;
+        .progress {
+          margin-bottom: 0;
+        }
     }
   }
 }
