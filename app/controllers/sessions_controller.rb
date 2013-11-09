@@ -12,6 +12,6 @@ class SessionsController < ApplicationController
 
   protected
     def auth_hash
-      raise request.env['omniauth.auth'].inspect
+      request.env['omniauth.auth']
     end
 end

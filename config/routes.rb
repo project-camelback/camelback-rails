@@ -5,10 +5,10 @@ WebAppRails::Application.routes.draw do
   resources :assignments
 
   # OMNIAUTH
-  # get 'auth/:provider/callback', to: 'sessions#create'  
-  get '/callback', to: 'sessions#create'
-  get '/login' => redirect('/auth/github')
-  get '/logout', to: 'sessions#destroy', as: :logout
+  get '/auth/:provider/callback', to: 'sessions#create'
+  # get '/callback', to: 'sessions#create'
+  get '/signin' => redirect('/auth/github')
+  get '/signout', to: 'sessions#destroy', as: :signout
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
