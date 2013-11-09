@@ -17,18 +17,18 @@ class Assignment < ActiveRecord::Base
 
   DEFAULT_GENERATE_TAGS_LIST = ["todo", "lab", "homework", "hw", "quiz", "rails", "sinatra", "rack", "git"]
 
-  def generate_tags
-    # when assignments are queried, we should run #generate_tags, then add all tags into the tag_list
+  def generate_tags(tags_array)
+    # when assignments are queried, we should run #generate_tags
 
     # tags come from the readme and the full_name (example: playlister-todo)
     
-      # generate tags should include all readme tags
+      # generate tags should include all readme tags, which is tags_array
       # readme line looks like:
       # tags: sinatra, forms, hashes, object orientation, mvc, rest, erb
     
       # create REGEX to look for any tags in the repo full_name
 
-
+    
 
   end
 

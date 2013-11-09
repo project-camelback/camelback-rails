@@ -28,14 +28,15 @@ class GetAssignments
     @client.org_repos('flatiron-school', :type => 'private')
   end
 
-  def create_tags(assignment)
+  def scrape_for_tags(assignment)
     scrape_url = assignment.make_scrape_url
-    scrape(scrape_url) if scrape_url
-    
+    scrape_url.nil? ? [] : scrape_and_create_tags(scrape_url)
   end
 
-  def scrape(scrape_url)
+  def scrape_and_create_tags(scrape_url)
+    # returns an array of tags and languages set by the instructor. Separating the two will require further logic.
     readme_page = Nokogiri::HTML(open(scrape_url))
+    readme_page.css("th:contains('tags')").first.parent.parent.parent.css("tbody div").collect do |div_tag| div_tag.text end.join(", ").split(", ") 
   end
 
   def insert_assignments
@@ -47,9 +48,11 @@ class GetAssignments
       puts "Saving #{assignment.name}."
       insert_forks(a)
       
-      tags_to_generate = create_tags(a)
+      tags_array = scrape_for_tags(a)
+      tags_array << DEFAULT_GENERATE_TAGS_LIST.select {|tag| full_name.include?(tag) && !tags_array.include?(tag) }
+      tags_array.flatten!
 
-      # a.tag_list.add(generate_tags())
+      a.tag_list.add(generate_tags(tags_array))
       a.save
     end
   end
