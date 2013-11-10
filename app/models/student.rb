@@ -20,6 +20,7 @@
 #
 
 class Student < ActiveRecord::Base
+  belongs_to :user, primary_key: :name, foreign_key: :login
   has_many :homeworks
   has_many :assignments, through: :homeworks
   has_many :assignment_submissions
