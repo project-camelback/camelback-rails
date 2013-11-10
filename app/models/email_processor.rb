@@ -1,8 +1,8 @@
 class EmailProcessor < ActiveRecord::Base
    def self.process(email)
-       if email.subject.include?("The Plan")
+       if email.subject.include? "The Plan"
         plan = Plan.new
-        plan.header = email.header
+        plan.header = email.subject
         plan.content = email.body
         plan.save
       end
