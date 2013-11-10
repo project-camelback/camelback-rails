@@ -15,6 +15,8 @@
 #
 
 class Assignment < ActiveRecord::Base
+  belongs_to :student
+  belongs_to :user
   has_many :homeworks
   has_many :students, through: :homeworks
   #one_to_many :assignment_submissions
