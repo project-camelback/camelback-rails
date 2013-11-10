@@ -11,7 +11,7 @@ class EmailProcessor < ActiveRecord::Base
         assignment.name = email.subject
         assignment.description = email.body
         assignment.save
-      end
+      # end
    end
 end
 
