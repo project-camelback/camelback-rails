@@ -1,7 +1,6 @@
 class EmailProcessor < ActiveRecord::Base
-
-   def parse_email
-      if email.subject.include?("The Plan")
+   def self.process(email)
+       if email.subject.include?("The Plan")
         plan = Plan.new
         plan.header = email.header
         plan.content = email.body
@@ -14,14 +13,6 @@ class EmailProcessor < ActiveRecord::Base
         assignment.save
       end
    end
-
-   def self.process(email)
-     self.parse_email
-
-    # all of your application-specific code here - creating models,
-    # processing reports, etc
-   end
-
 end
 
 
