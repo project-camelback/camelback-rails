@@ -1,10 +1,10 @@
 WebAppRails::Application.routes.draw do
-  root :to => 'assignments#index'
+
   
   resources :mockups
   resources :assignments
 
-<<<<<<< HEAD
+
   root :to => 'assignments#index'
   get 'login' => 'users#login'
   # get 'github-oauth' => 'assignments#index'
@@ -18,15 +18,15 @@ WebAppRails::Application.routes.draw do
   # mount_griddler('/email/incoming')
 
   # the "get off my lawn", DIY approach:
-  # post '/email_processor' => 'griddler/emails#create'
+  #post '/email_processor' => 'griddler/emails#create'
 
-=======
+
   # OMNIAUTH
   get '/auth/:provider/callback', to: 'sessions#create'
   # get '/callback', to: 'sessions#create'
   get '/signin' => redirect('/auth/github')
   get '/signout', to: 'sessions#destroy', as: :signout
->>>>>>> 5c2009fdca12ec7c8f79c9cb8896529a5cb07a1c
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

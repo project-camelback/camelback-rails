@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131109223503) do
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20131108224413) do
->>>>>>> 5c2009fdca12ec7c8f79c9cb8896529a5cb07a1c
 
   create_table "assignments", force: true do |t|
     t.string   "name"
@@ -69,8 +64,6 @@ ActiveRecord::Schema.define(version: 20131108224413) do
     t.string   "clone_url"
   end
 
-<<<<<<< HEAD
-=======
   create_table "users", force: true do |t|
     t.string   "provider"
     t.string   "uid"
@@ -79,5 +72,4 @@ ActiveRecord::Schema.define(version: 20131108224413) do
     t.datetime "updated_at"
   end
 
->>>>>>> 5c2009fdca12ec7c8f79c9cb8896529a5cb07a1c
 end
