@@ -1,6 +1,6 @@
 class EmailProcessor < ActiveRecord::Base
    def self.process(email)
-     parse_email
+     self.parse_email
 
     # all of your application-specific code here - creating models,
     # processing reports, etc
