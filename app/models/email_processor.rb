@@ -8,7 +8,7 @@ class EmailProcessor < ActiveRecord::Base
       end
       if email.subject.include?("Lab" || "lab" || "HW")
         assignment = Assignment.new
-        assignment.name = email.header
+        assignment.name = email.subject
         assignment.description = email.body
         assignment.save
       end
