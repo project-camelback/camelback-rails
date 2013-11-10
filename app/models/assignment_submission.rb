@@ -1,7 +1,7 @@
 class AssignmentSubmission < ActiveRecord::Base
 
-  many_to_one :assignment
-  many_to_one :student
+  belongs_to :assignment
+  belongs_to :student
 
   # grader.sh <$1 github_username> <$2 github_repository> <$3 branch>
 
