@@ -24,7 +24,7 @@ WebAppRails::Application.routes.draw do
   # OMNIAUTH
   get '/auth/:provider/callback', to: 'sessions#create'
   # get '/callback', to: 'sessions#create'
-  get '/signin' => redirect('/auth/github')
+  get '/signin' => redirect('http://camelback-app.herokuapp.com/auth/github')
   get '/signout', to: 'sessions#destroy', as: :signout
 
 
