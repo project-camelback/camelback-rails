@@ -15,14 +15,11 @@ gem 'rest-client'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
 gem 'bootstrap-sass', '~> 3.0.1.0.rc'
-<<<<<<< HEAD
 gem 'acts-as-taggable-on'
-gem 'open-uri'
+require 'open-uri'
 gem 'nokogiri'
-=======
+gem 'mechanize'
 gem 'griddler'
-
->>>>>>> 4f7f1aba177547b64d6ab7b3e40bab51d20499d6
 
 group :development do
   gem 'sqlite3'
