@@ -36,6 +36,11 @@ class GetAssignments
         :url => repo_url(assignment.full_name))
       puts "Saving #{assignment.name}."
       insert_forks(a)
+      
+      tags_array = Assignment.generate_tags(a, @client)
+
+      a.tag_list.add(tags_array)
+      a.save
     end
   end
 
