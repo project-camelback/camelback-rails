@@ -23,9 +23,10 @@ WebAppRails::Application.routes.draw do
 
   # OMNIAUTH
   get '/auth/:provider/callback', to: 'sessions#create'
-  # get '/callback', to: 'sessions#create'
+  get '/auth/failure' => redirect('/')
   get '/signin' => redirect('/auth/github')
   get '/signout', to: 'sessions#destroy', as: :signout
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
