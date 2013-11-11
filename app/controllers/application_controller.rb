@@ -1,16 +1,11 @@
 class ApplicationController < ActionController::Base
-
-  before_filter :authenticate  #protect directories when deploying to public web, since we are displaying private repos
-
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  protected
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == 'camelback' && password == '33west26'
+  private
+    def current_user
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
-  end
-
+    helper_method :current_user
 end

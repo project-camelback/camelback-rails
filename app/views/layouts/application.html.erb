@@ -7,10 +7,12 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script>document.write('<script src="http://' + (location.host || 'localhost')
+.split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 <body>
-  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
+    <nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,7 +34,6 @@
         <button type="button" class="btn btn-info">All</button>
         <button type="button" class="btn btn-default">Not Started</button>
         <button type="button" class="btn btn-default">In Progress</button>
-        <button type="button" class="btn btn-default">Stuck</button>
         <button type="button" class="btn btn-default">Done</button>
       </div>
       </li>
@@ -46,10 +47,14 @@
          <!--  <li> <input type="search" placeholder="Search tags, issues..." class="form-control"></li>
           <li class="divider"></li> -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Anders Ramsay <b class="caret"></b></a>
+            <% if current_user %>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.login %><b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Sign Out</a></li>
+                <li><%= link_to "Sign Out", signout_path %></li>
               </ul>
+            <% else %>
+              <%= link_to "Sign in", signin_path, class: "dropdown-toggle" %>
+            <% end %>
             </li>
           </ul>
         </div><!--/.navbar-collapse -->

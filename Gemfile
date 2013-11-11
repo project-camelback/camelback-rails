@@ -10,13 +10,19 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'octokit'
+gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 gem 'rest-client'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', "~> 2.0.alpha.0", :group => :assets
 gem 'bootstrap-sass', '~> 3.0.1.0.rc'
+<<<<<<< HEAD
 gem 'acts-as-taggable-on'
 gem 'open-uri'
 gem 'nokogiri'
+=======
+gem 'griddler'
+
+>>>>>>> 4f7f1aba177547b64d6ab7b3e40bab51d20499d6
 
 group :development do
   gem 'sqlite3'
@@ -38,3 +44,26 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# FROM GRADER APP
+#gem 'sinatra'
+#gem 'sequel'
+#gem 'sqlite3'
+#gem 'sinatra-reloader'
+gem 'git'
+gem 'rspec'
+#gem 'pry'
+gem 'awesome_print'
+gem 'oj'
+gem 'chronic'
+gem 'colorize'
+gem 'rake'
+
+group :test do
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
+  gem 'rack-test'
+  gem 'awesome_print'
+end
+

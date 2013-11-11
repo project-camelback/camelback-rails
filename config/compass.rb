@@ -9,3 +9,4 @@ sass_dir = "app/assets/sass"
 images_dir = "app/assets/images"
 javascripts_dir = "app/assets/javascripts"
 
+

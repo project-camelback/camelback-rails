@@ -1,16 +1,122 @@
-// customize bootstrap variables here:
 @import "variables";
+@import "compass";
 @import "bootstrap";
-// @import "compass/css3/box-shadow";
 
+// VARIABLES
+// ----------------------------
+$light-gray: #b1b4b0;
+
+
+// CONTAINER
+// ----------------------------
 .container-top-padding {
   padding-top:65px;
 }
 
+
+// NAVBAR
+// ----------------------------
+.nav-btn-group {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size:smaller;
+
+  .navbar-form {
+  margin-top: -1px;
+  margin-left: 10px;
+
+    & input {
+      font-size: 14px;
+      padding: 0px 8px;
+    }
+  }
+}
+
+// ASSIGNMENTS VIEW
+// ----------------------------
+table.table {
+  thead {
+    th {
+      color:$light-gray;
+      font-weight: 300;
+    }
+  }
+  tbody {
+    td {
+      vertical-align: middle;
+        .progress {
+          margin-bottom: 0;
+        }
+    }
+  }
+}
+
+.assignments-list {
+  h2 {
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom:2px;
+  }
+}
 .table-top-padding {
   padding-top:20px;
 }
+.issue {
+  color:#b4b1ab;
+  font-size:10px;
+  //font-style: italic;
+  line-height:3px;
+}
 
+ul.meta-info {
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  li {
+    display: inline;
+    font-size: 10px;
+    color:$light-gray;
+    margin-right: 3px;
+
+    img {
+      @include border-radius(4px);
+    }
+    a {
+       color:$light-gray;
+    }
+    span.badge a, span.label a  {
+      color:#ffffff;
+      font-weight: 300;
+    }
+  }
+}
+
+.editable_area {
+  padding: 5px;
+   border: 1px solid #e8ebeb;
+   @include border-radius(5px);
+   color:$light-gray;
+   font-size: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f2f5f5;   
+  }
+}
+
+.status {
+  color:$light-gray;
+   font-size: 12px;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+
+// LOGIN VIEW
+// ----------------------------
 .centered {
   position: fixed;
   top: 40%;
@@ -19,43 +125,7 @@
   margin-left: -100px;
    text-align: center;
 }
-
 .login-button {
   max-width: 200px;
 }
 
-span.badge a, span.label a  {
-  color:#ffffff;
-  font-weight: 300;
-  //font-size: smaller;
-}
-
-.issue {
-  color:#b4b1ab;
-  font-size:10px;
-  //font-style: italic;
-  line-height:3px;
-}
-
-.nav-btn-group {
-  margin-left: 10px;
-  margin-top: 10px;
-  font-size:smaller;
-}
-
-.nav-btn-group .navbar-form {
-  margin-top: -1px;
-  margin-left: 10px;
-
-   & input {
-    font-size: 14px;
-    padding: 0px 8px;
-   }
-}
-
-// .progress-link:hover {
-// //  border: 2px solid #83a5e0;
-// //text-decoration: underline;
-//  @include single-box-shadow;
-
-// }
