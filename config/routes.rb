@@ -1,11 +1,8 @@
 WebAppRails::Application.routes.draw do
 
-  
   resources :plans
-
   resources :mockups
   resources :assignments
-
 
   root :to => 'assignments#index'
   get 'login' => 'users#login'
