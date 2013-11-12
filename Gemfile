@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 # Heroku demands ruby 2.0.0
 ruby "2.0.0"
 
+gem 'pg'
 gem 'rails', '4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
