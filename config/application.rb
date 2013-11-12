@@ -36,6 +36,7 @@ module WebAppRails
     # config.i18n.default_locale = :de
 
 # Enable the asset pipeline
+config.assets.initialize_on_precompile = false
 config.assets.enabled = true
 
 
