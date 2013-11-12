@@ -1,5 +1,14 @@
 class EmailProcessor < ActiveRecord::Base
    def self.process(email)
+
+      assignment = Assignment.new
+      string = email.body
+      url, full_name, name = string.match(/(https*:\/\/github.com\/(flatiron-school\/([\w-]+)))/).captures
+      assignment.name = name #bare repo name
+      assignment.url = url #url for flatiron fork
+      assignment.full_name = full_name #repo name with org
+      assignment.save
+
       #  if email.subject.include? "The Plan"
       #   plan = Plan.new
       #   plan.header = email.subject
@@ -7,10 +16,6 @@ class EmailProcessor < ActiveRecord::Base
       #   plan.save
       # end
       # if email.subject.include?("Lab" || "lab" || "HW")
-        assignment = Assignment.new
-        assignment.name = email.subject
-        assignment.description = email.body
-        assignment.save
       # end
    end
 end
