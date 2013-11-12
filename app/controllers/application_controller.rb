@@ -7,7 +7,11 @@ class ApplicationController < ActionController::Base
 
   private
     def current_user
-      @current_user ||= User.find(session[:user_id]) if !User.all.empty? 
+      if session[:user_id]
+        @current_user ||= User.find(session[:user_id])
+      else
+        @current_user ||= User.find(session[:user_id]) if !User.all.empty? 
+      end
     end
     
     def student_user
