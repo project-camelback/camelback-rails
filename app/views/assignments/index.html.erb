@@ -9,13 +9,13 @@
         </tr>
       </thead>
       <tbody>
-        <% @assignments.each do |assignment| %>
-        <tr>
-          <td width="150"><%= link_to assignment.name, assignment.url %></td>
-          <td>[Tests]</td>
-          <td><a href="#" title="" class="issue">Some issue...</a></td>
+      <% @assignments.each do |assignment| %>
+      <tr>
+        <td width="150"><%= link_to assignment.name, assignment.web_url %></td>
+        <td>[Tests]</td>
+        <td><a href="#" title="" class="issue">Some issue...</a></td>
       </tr>
-      <% end %>     
+      <% end %>
       <tr>
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>

@@ -33,7 +33,7 @@ class GetAssignments
       a = Assignment.create(
         :name => assignment.name,
         :full_name => assignment.full_name,
-        :url => repo_url(assignment.full_name))
+        :web_url => repo_url(assignment.full_name))
       puts "Saving #{assignment.name}."
       insert_forks(a)
       

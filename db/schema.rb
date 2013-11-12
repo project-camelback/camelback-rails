@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20131109223503) do
   create_table "assignments", force: true do |t|
     t.string   "name"
     t.string   "full_name"
-    t.string   "url"
+    t.string   "web_url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20131109223503) do
     t.integer  "student_id"
     t.integer  "assignment_id"
     t.string   "full_name"
-    t.string   "web_url"
+    t.string   "url"
     t.string   "clone_url"
   end
 
