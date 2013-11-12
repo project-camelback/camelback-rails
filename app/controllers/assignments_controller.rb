@@ -6,6 +6,7 @@ class AssignmentsController < ApplicationController
   def index
     @time = Time.now
     @assignments = Assignment.all
+    @student = Student.find_by(name: "danielchangNYC")
     # client = Octokit::Client.new :access_token => session[:access_token]
     # if client.user_authenticated?
     #   @private_assignments = client.org_repos('flatiron-school', :type => 'private')

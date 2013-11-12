@@ -25,7 +25,11 @@ class GetAssignments
   end
 
   def assignments
-    @client.org_repos('flatiron-school', :type => 'private')
+    @client.org_repos('flatiron-school', :type => 'public')
+    # assignments_array = []
+    # assignments_array << @client.org_repos('flatiron-school', :type => 'private')
+    # assignments_array << @client.org_repos('flatiron-school', :type => 'public')
+    # assignments_array.flatten!
   end
 
   def insert_assignments
