@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131110194531) do
+ActiveRecord::Schema.define(version: 20131112184712) do
 
   create_table "assignments", force: true do |t|
     t.string   "name"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20131110194531) do
     t.string   "clone_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "evaluated"
+    t.integer  "examples"
+    t.integer  "passes"
+    t.integer  "pendings"
+    t.integer  "failures"
+    t.string   "failure_descriptions"
+    t.string   "evaluation_date"
   end
 
   create_table "mockups", force: true do |t|
