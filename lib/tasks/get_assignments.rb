@@ -51,11 +51,15 @@ class GetAssignments
   def insert_forks(assignment)
     forks_array = client.forks(assignment.full_name)
     forks_array.each do |fork|
+      # binding.pry
       s = Student.find_or_create_by(:name => fork.owner.login)
       h = Homework.create({
+        :name => fork.name,
         :full_name => fork.full_name,
         :student_id => s.id,
-        :assignment_id => assignment.id
+        :assignment_id => assignment.id,
+        :web_url => fork.rels[:html].href,
+        :clone_url => fork.rels[:ssh].href
       })
       puts "  Saving #{h.full_name}."
     end

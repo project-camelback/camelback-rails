@@ -1,4 +1,6 @@
-WebAppRails::Application.routes.draw do  
+WebAppRails::Application.routes.draw do
+
+  resources :plans
   resources :mockups
   resources :assignments
 
