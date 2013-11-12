@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "Signed out."
+    redirect_to signout_path, notice: "Signed out."
   end
-
+  
   protected
     def auth_hash
       request.env['omniauth.auth']
