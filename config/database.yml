@@ -56,9 +56,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: 
+  adapter: 'postgres'
+  encoding: 
+  database: 'da6kbs3lj65bgf'
   pool: 5
-  username: 
-  password: 
+  username: 'loaapunygsjawb'
+  password: 'jc1hED5rCBMWwxdr_K-XPFya0P'
