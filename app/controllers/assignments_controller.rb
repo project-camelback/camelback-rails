@@ -8,7 +8,6 @@ class AssignmentsController < ApplicationController
     
     if current_user
       @assignments = student_user.homeworks
-      binding.pry
     else
       @assignments = Assignment.all
     end
