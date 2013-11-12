@@ -26,6 +26,7 @@ group :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'annotate', ">=2.5.0" 
+  gem 'pg'
   #gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 end
 
