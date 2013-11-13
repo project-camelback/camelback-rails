@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20131113144252) do
     t.string   "instructor_gravatar"
     t.string   "instructor_profile"
     t.string   "instructor"
-    t.boolean  "spec_present"
+    t.boolean  "spec_present",        default: false
   end
 
   create_table "email_processors", force: true do |t|
