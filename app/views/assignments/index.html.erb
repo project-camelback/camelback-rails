@@ -11,12 +11,41 @@
       <tbody>
         <% @assignments.each do |assignment| %>
         <tr>
-          <td width="150"><%= link_to assignment.name, assignment.url %></td>
-          <td>[Tests]</td>
-          <td><a href="#" title="" class="issue">Some issue...</a></td>
+          <td width="150"><h2><%= link_to assignment.name, assignment.url %></h2>
+          <ul class="meta-info">
+            <li><a href="#" title=""><img src="https://1.gravatar.com/avatar/a4a5d413f1bd759eedfba1098629a06d?d=https%3A%2F%2Fidenticons.github.com%2F92761aee6b19133c8240c751569cafb5.png&r=x&s=140" alt="" height="20"> Scott</a></li>
+            <li><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/blob/master/README.md" title="">README.md</a>
+              </li><li><span class="label label-default"><span class="glyphicon glyphicon-tag"></span>&nbsp;<a href="#" title="">ORM</a></span> <span class="label label-default"><span class="glyphicon glyphicon-tag"></span>&nbsp;<a href="#" title="">ActiveRecord</a></span>
+                </li>
+            </ul>
+
+          </td>
+          <td>
+          <span class="status">Not Started &raquo;</span> <a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/fork" class="btn btn-default btn-sm" role="button">Fork</a>
+         <!--  <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width: 30%">
+            <span>5 Passing</span>
+            </div>
+            <div class="progress-bar progress-bar-warning" style="width: 30%">
+              <span>5</span>
+            </div>
+          <div class="progress-bar progress-bar-danger" style="width: 40%">
+            <span>4</span>
+            </div> -->
+            </td>
+          <td><p class="meta-info">No issues to show.  Create a new issue.No issues posted.  </p>
+          <!-- <ul class="meta-info">
+            <li>Latest commit: <a href="#" title="">update gitignore</a></li>
+            <li>Issue: <a href="https://github.com/flatiron-school/pollywog-ranch-associations-ruby-003/issues" title="">Bug in the Tadpole Show View</a>
+              </li><li><a href="#" title="">New Issue</a>
+                </li>
+            </ul>
+ -->
+
+          </td>
       </tr>
       <% end %>     
-      <!-- <tr>
+      <tr>
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>
           <ul class="meta-info">
@@ -109,7 +138,7 @@
             </div></a></td>
       <td>
         <div class="editable_area" id="github_issue_id">GitHub Issues (None posted. Click to Add)</div></td>
-      </tr> -->
+      </tr>
 
     </tbody>
   </table>
