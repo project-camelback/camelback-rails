@@ -77,6 +77,12 @@ class Homework < ActiveRecord::Base
     system(grader_command)
   end
 
+  def self.evaluate_student(student_obj)
+    student_obj.homeworks.where(spec_present: :true).each do |sub|
+      sub.evaluate
+    end
+  end
+
   def self.evaluate_all(assignment)
     assignment.homeworks.each do |sub|
       sub.evaluate
