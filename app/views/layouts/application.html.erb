@@ -47,7 +47,7 @@
           <li class="divider"></li> -->
             <li class="dropdown user-info">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-<img class="gravatar" src="https://2.gravatar.com/avatar/cb7a4cc2cff3810e8cc4bbf4384e3f48?d=https%3A%2F%2Fidenticons.github.com%2F3613e2acb91a57ceb105aa93fa562ebe.png&r=x&s=140" alt="andersr gravatar"> <%= current_user.login %><b class="caret"></b></a>
+<img class="gravatar" src="<%= current_user.gravatar_url %>" alt="<%= current_user.login %> gravatar"> <%= current_user.login %><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Sign Out", signout_path %></li>
               </ul>
