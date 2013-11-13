@@ -7,6 +7,7 @@ class CreateHomeworks < ActiveRecord::Migration
       t.string :full_name
       t.string :web_url
       t.string :clone_url
+      t.string :gravatar_url
 
       t.timestamps
     end
