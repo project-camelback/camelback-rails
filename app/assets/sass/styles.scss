@@ -31,6 +31,33 @@ $light-gray: #b1b4b0;
     }
   }
 }
+// PLAN FOR DAY
+// ----------------------------
+ .plan-4-day {
+  margin-bottom: 20px;
+
+
+  h2 {
+    color:$light-gray;
+    display: inline;
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  ol {
+    margin-left: 10px;
+    display: inline;
+    padding-left: 0;
+    
+    li {
+      font-size: 12px;
+      margin-right: 10px;
+      padding-left: 0;
+      display: inline;
+    }
+  }
+ }
+
 
 // ASSIGNMENTS VIEW
 // ----------------------------
@@ -113,6 +140,14 @@ ul.meta-info {
 .align-middle {
   vertical-align: middle;
 }
+
+// ISSUES
+// ----------------------------
+.issues {
+   color:$light-gray;
+   font-size: 12px;
+}
+
 
 
 // LOGIN VIEW
