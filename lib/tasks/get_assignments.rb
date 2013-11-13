@@ -36,11 +36,9 @@ class GetAssignments
         :web_url => repo_url(assignment.full_name),
         :github_created_at => assignment.created_at
         )
-
       puts "Saving #{assignment.name}."
       insert_forks(a)
-      
-      tags_array = Assignment.generate_tags(a)
+      Assignment.generate_tags(a)
       a.save
     end
   end
