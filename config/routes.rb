@@ -24,12 +24,11 @@ WebAppRails::Application.routes.draw do
   # get 'callback' => 'users#callback'
   # # get 'github-oauth' => 'assignments#index'
 
+  # GRIDDLER
   # mount using default path
   # mount_griddler
-
   # mount using a custom path
   # mount_griddler('/email/incoming')
-
   # the "get off my lawn", DIY approach:
   #post '/email_processor' => 'griddler/emails#create'
 
