@@ -8,7 +8,7 @@ class EmailProcessor < ActiveRecord::Base
          plan = Plan.new 
          # Rails.logger.warn(string_parse)    
          Rails.logger.warn(string_parse.match(/^(Day(\S|\s)+)^#/).to_s)
-         # plan.content = string_parse.match(/^(Day(\S|\s)+)^#/).to_s
+         plan.content = string_parse
          # Rails.logger.warn(plan.content)       
          plan.save
       end
