@@ -7592,24 +7592,38 @@ td.visible-print {
   padding: 0px 8px;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
+.user-info .gravatar {
+  margin-right: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 47, ../sass/styles.scss */
 .plan-4-day {
   margin-bottom: 20px;
 }
-/* line 40, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 .plan-4-day h2 {
   color: #b1b4b0;
   display: inline;
   margin-top: 0;
   font-size: 14px;
 }
-/* line 47, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
+.plan-4-day p {
+  display: inline;
+}
+/* line 60, ../sass/styles.scss */
 .plan-4-day ol {
   margin-left: 10px;
   display: inline;
   padding-left: 0;
 }
-/* line 52, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 .plan-4-day ol li {
   font-size: 12px;
   margin-right: 10px;
@@ -7617,71 +7631,63 @@ td.visible-print {
   display: inline;
 }
 
-/* line 66, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 table.table thead th {
   color: #b1b4b0;
   font-weight: 300;
 }
-/* line 72, ../sass/styles.scss */
+/* line 85, ../sass/styles.scss */
 table.table tbody td {
   vertical-align: middle;
 }
-/* line 74, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 table.table tbody td .progress {
   margin-bottom: 0;
 }
 
-/* line 82, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 .assignments-list h2 {
   font-size: 20px;
   margin-top: 4px;
   margin-bottom: 2px;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 101, ../sass/styles.scss */
 .table-top-padding {
   padding-top: 20px;
 }
 
-/* line 91, ../sass/styles.scss */
+/* line 104, ../sass/styles.scss */
 .issue {
   color: #b4b1ab;
   font-size: 10px;
   line-height: 3px;
 }
 
-/* line 98, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 ul.meta-info {
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 103, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 ul.meta-info li {
   display: inline;
   font-size: 10px;
   color: #b1b4b0;
   margin-right: 3px;
 }
-/* line 109, ../sass/styles.scss */
-ul.meta-info li img {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 112, ../sass/styles.scss */
+/* line 122, ../sass/styles.scss */
 ul.meta-info li a {
   color: #b1b4b0;
 }
-/* line 115, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #ffffff;
   font-weight: 300;
 }
 
-/* line 122, ../sass/styles.scss */
+/* line 132, ../sass/styles.scss */
 .editable_area {
   padding: 5px;
   border: 1px solid #e8ebeb;
@@ -7693,30 +7699,30 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #b1b4b0;
   font-size: 10px;
 }
-/* line 129, ../sass/styles.scss */
+/* line 139, ../sass/styles.scss */
 .editable_area:hover {
   cursor: pointer;
   background-color: #f2f5f5;
 }
 
-/* line 135, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 .status {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 140, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 .align-middle {
   vertical-align: middle;
 }
 
-/* line 146, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 .issues {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 155, ../sass/styles.scss */
+/* line 165, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7726,7 +7732,17 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   text-align: center;
 }
 
-/* line 163, ../sass/styles.scss */
+/* line 173, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
+}
+
+/* line 180, ../sass/styles.scss */
+.gravatar {
+  height: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }

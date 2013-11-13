@@ -31,6 +31,17 @@ $light-gray: #b1b4b0;
     }
   }
 }
+
+// USER INFO
+// ----------------------------
+.user-info {
+  .gravatar {
+    margin-right: 3px;
+    @include border-radius(4px);
+  }
+}
+
+
 // PLAN FOR DAY
 // ----------------------------
  .plan-4-day {
@@ -42,6 +53,8 @@ $light-gray: #b1b4b0;
     display: inline;
     margin-top: 0;
     font-size: 14px;
+  }
+  p{ display: inline;
   }
 
   ol {
@@ -106,9 +119,6 @@ ul.meta-info {
     color:$light-gray;
     margin-right: 3px;
 
-    img {
-      @include border-radius(4px);
-    }
     a {
        color:$light-gray;
     }
@@ -163,4 +173,12 @@ ul.meta-info {
 .login-button {
   max-width: 200px;
 }
+
+// IMAGES
+// ----------------------------
+
+  .gravatar {
+    height: 20px;
+    @include border-radius(4px);
+  }
 
