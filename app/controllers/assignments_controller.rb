@@ -5,7 +5,7 @@ class AssignmentsController < ApplicationController
   # GET /assignments.json
   def index
     @time = Time.now
-    @assignments = Assignment.all
+    @assignments = Assignment.all.sort! { |assignment| assignment.created_at }
     @student = Student.find_by(name: "danielchangNYC")
     # client = Octokit::Client.new :access_token => session[:access_token]
     # if client.user_authenticated?

@@ -15,7 +15,7 @@
             <% if Homework.find_by(student_id: @student.id, assignment_id: assignment.id).nil? %>
             <td style="vertical-align:middle;"><span class="status">Not Started &raquo;</span> <a href="<%= assignment.url %>/fork" class="btn btn-default btn-sm" role="button">Fork</a></td>
             <% else %>
-            <td><%= Homework.find_by(student_id: @student.id, assignment_id: assignment.id).full_name %></td>
+            <td><%= Homework.find_by(student_id: @student.id, assignment_id: assignment.id).clone_url %></td>
             <% end %>
 
           <td><a href="#" title="" class="issue">Some issue...</a></td>

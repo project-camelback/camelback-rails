@@ -19,7 +19,6 @@ gem 'bootstrap-sass', '~> 3.0.1.0.rc'
 gem 'acts-as-taggable-on'
 require 'open-uri'
 gem 'nokogiri'
-gem 'mechanize'
 gem 'griddler'
 
 group :development do
