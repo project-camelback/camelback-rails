@@ -29,7 +29,14 @@ class Assignment < ActiveRecord::Base
     # tags_array = self.scrape_for_tags(assignment, client)
     # tags_array << DEFAULT_GENERATE_TAGS_LIST.select {|tag| assignment.full_name.include?(tag) && !tags_array.include?(tag) }
     tags_array = DEFAULT_GENERATE_TAGS_LIST.select {|tag| assignment.full_name.include?(tag) }
+    # readme_tags = tags_from_readme
     # tags_array.flatten!
+  end
+
+  def self.tags_from_readme
+    # check if this assignment has a readme
+    # if so, open the file
+    # regex each line: does it start with tag? if so, get all the tags. Regex: /^tags: ([\S ]+)/
   end
 
   def self.scrape_for_tags(assignment, client)
