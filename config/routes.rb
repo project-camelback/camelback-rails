@@ -2,7 +2,7 @@ WebAppRails::Application.routes.draw do
 
   root :to => 'assignments#index'
   get 'login' => 'users#login'
-  #get 'logout' => 'session#destroy'  
+  get 'logout' => 'session#destroy', as: :signout  
 
 
   # OMNIAUTH
@@ -11,7 +11,7 @@ WebAppRails::Application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure' => redirect('/')
   get '/signin' => redirect('/auth/github')
-  get '/signout', to: 'sessions#destroy', as: :signout
+  #get '/signout', to: 'sessions#destroy', as: :signout
 
 
   resources :plans
