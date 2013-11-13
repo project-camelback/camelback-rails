@@ -3,7 +3,7 @@ class CreateAssignments < ActiveRecord::Migration
     create_table :assignments do |t|
       t.string :name
       t.string :full_name
-      t.string :url
+      t.string :web_url
 
       t.timestamps
     end

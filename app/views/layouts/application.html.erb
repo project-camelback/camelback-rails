@@ -27,7 +27,7 @@
               <input type="search" placeholder="Search tags, issues..." class="form-control">
             </div>
           </form> -->
-          <ul class="nav navbar-nav nav-btn-group">
+          <!-- <ul class="nav navbar-nav nav-btn-group">
           <li>
           <div class="btn-group btn-group-sm">
         <button type="button" class="btn btn-info">All</button>
@@ -41,12 +41,13 @@
             <input type="search" class="form-control" placeholder="Search...">
           </div>
         </form></li>
-      </ul>
+      </ul> -->
           <ul class="nav navbar-nav navbar-right">
          <!--  <li> <input type="search" placeholder="Search tags, issues..." class="form-control"></li>
           <li class="divider"></li> -->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.login %><b class="caret"></b></a>
+            <li class="dropdown user-info">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<img class="gravatar" src="<%= current_user.gravatar_url %>" alt="<%= current_user.login %> gravatar"> <%= current_user.login %><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Sign Out", signout_path %></li>
               </ul>

@@ -32,6 +32,46 @@ $light-gray: #b1b4b0;
   }
 }
 
+// USER INFO
+// ----------------------------
+.user-info {
+  .gravatar {
+    margin-right: 3px;
+    @include border-radius(4px);
+  }
+}
+
+
+// PLAN FOR DAY
+// ----------------------------
+ .plan-4-day {
+  margin-bottom: 20px;
+
+
+  h2 {
+    color:$light-gray;
+    display: inline;
+    margin-top: 0;
+    font-size: 14px;
+  }
+  p{ display: inline;
+  }
+
+  ol {
+    margin-left: 10px;
+    display: inline;
+    padding-left: 0;
+    
+    li {
+      font-size: 12px;
+      margin-right: 10px;
+      padding-left: 0;
+      display: inline;
+    }
+  }
+ }
+
+
 // ASSIGNMENTS VIEW
 // ----------------------------
 table.table {
@@ -79,9 +119,6 @@ ul.meta-info {
     color:$light-gray;
     margin-right: 3px;
 
-    img {
-      @include border-radius(4px);
-    }
     a {
        color:$light-gray;
     }
@@ -114,6 +151,14 @@ ul.meta-info {
   vertical-align: middle;
 }
 
+// ISSUES
+// ----------------------------
+.issues {
+   color:$light-gray;
+   font-size: 12px;
+}
+
+
 
 // LOGIN VIEW
 // ----------------------------
@@ -128,4 +173,12 @@ ul.meta-info {
 .login-button {
   max-width: 200px;
 }
+
+// IMAGES
+// ----------------------------
+
+  .gravatar {
+    height: 20px;
+    @include border-radius(4px);
+  }
 

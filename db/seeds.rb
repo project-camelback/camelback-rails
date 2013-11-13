@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Assignments_to_Run_RSpec = [
+# assignment names
+]
+
+Assignment.all.each do |assignment|
+  if Assignments_to_Run_RSpec.include? assignment.name 
+    assignment.spec_present = true
+  else
+    assignment.spec_present = false
+  end
+  assignment.save
+end

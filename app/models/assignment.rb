@@ -39,7 +39,7 @@ class Assignment < ActiveRecord::Base
 
   def self.scrape_and_create_tags(scrape_url, client)
     # returns an array of tags and languages set by the instructor. Separating the two will require further logic.
-    binding.pry
+    # binding.pry
     readme_page = Nokogiri::HTML(open(scrape_url))
     readme_page.css("th:contains('tags')").first.parent.parent.parent.css("tbody div").collect do |div_tag| div_tag.text end.join(", ").split(", ") 
   end

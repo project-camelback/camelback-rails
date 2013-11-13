@@ -25,7 +25,11 @@ class GetAssignments
   end
 
   def assignments
-    @client.org_repos('flatiron-school', :type => 'private')
+    # @client.org_repos('flatiron-school', :type => 'public')
+    assignments_array = []
+    assignments_array << @client.org_repos('flatiron-school', :type => 'private')
+    assignments_array << @client.org_repos('flatiron-school', :type => 'public')
+    assignments_array.flatten!
   end
 
   def insert_assignments
@@ -33,7 +37,7 @@ class GetAssignments
       a = Assignment.create(
         :name => assignment.name,
         :full_name => assignment.full_name,
-        :url => repo_url(assignment.full_name),
+        :web_url => repo_url(assignment.full_name),
         :github_created_at => assignment.created_at
         )
 
@@ -41,7 +45,8 @@ class GetAssignments
       insert_forks(a)
       
       tags_array = Assignment.generate_tags(a, @client)
-
+      # binding.pry
+      # raise "ending"
       a.tag_list.add(tags_array)
       a.save
     end
@@ -62,7 +67,8 @@ class GetAssignments
         :student_id => s.id,
         :assignment_id => assignment.id,
         :web_url => fork.rels[:html].href,
-        :clone_url => fork.rels[:ssh].href
+        :clone_url => fork.rels[:ssh].href,
+        :gravatar_url => "https://1.gravatar.com/avatar/#{fork.owner.gravatar_id}.png"
       })
       puts "  Saving #{h.full_name}."
     end
