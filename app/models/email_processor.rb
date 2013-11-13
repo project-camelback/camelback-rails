@@ -1,8 +1,8 @@
 class EmailProcessor < ActiveRecord::Base
    def self.process(email)
       
-      subject_parse = email.subject.to_s
-      string_parse = email.body.to_s
+      subject_parse = email.subject
+      string_parse = email.body
 
       if subject_parse.match(/(The Plan)/)
          plan = Plan.new 
