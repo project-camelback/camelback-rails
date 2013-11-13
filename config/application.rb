@@ -38,6 +38,8 @@ module WebAppRails
 # Enable the asset pipeline
 config.assets.initialize_on_precompile = false
 config.assets.enabled = true
+# config.logger = Logger.new(STDOUT)
+
 
 
   end
