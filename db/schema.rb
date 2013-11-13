@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 20131112225456) do
     t.string   "provider"
     t.string   "uid"
     t.string   "login"
+    t.string   "gravatar_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

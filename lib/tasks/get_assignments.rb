@@ -25,11 +25,7 @@ class GetAssignments
   end
 
   def assignments
-    # @client.org_repos('flatiron-school', :type => 'public')
-    assignments_array = []
-    assignments_array << @client.org_repos('flatiron-school', :type => 'private')
-    assignments_array << @client.org_repos('flatiron-school', :type => 'public')
-    assignments_array.flatten!
+    @client.org_repos('flatiron-school', :type => 'private')
   end
 
   def insert_assignments
@@ -44,10 +40,7 @@ class GetAssignments
       puts "Saving #{assignment.name}."
       insert_forks(a)
       
-      tags_array = Assignment.generate_tags(a, @client)
-      # binding.pry
-      # raise "ending"
-      a.tag_list.add(tags_array)
+      tags_array = Assignment.generate_tags(a)
       a.save
     end
   end
