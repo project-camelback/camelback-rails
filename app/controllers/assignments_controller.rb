@@ -4,7 +4,9 @@ class AssignmentsController < ApplicationController
   # GET /assignments
   # GET /assignments.json
   def index
-    @assignments = Assignment.all.order('github_created_at DESC')
+    @student = Student.find_by(:name => current_user.login)
+    @student.gravatar_url = @student.homeworks[0].gravatar_url
+    @student.assignments = Assignment.all.order('github_created_at DESC')
     #binding.pry
     #@assignments.sort_by(&:github_created_at)
   end
