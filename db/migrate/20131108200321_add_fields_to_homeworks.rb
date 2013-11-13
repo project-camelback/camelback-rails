@@ -21,6 +21,7 @@ class AddFieldsToHomeworks < ActiveRecord::Migration
     add_column :students, :full_name, :string
     add_column :students, :web_url, :string
     add_column :students, :clone_url, :string
+    add_column :students, :gravatar_url, :string
   end
 end
 

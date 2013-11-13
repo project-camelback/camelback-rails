@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20131112235827) do
   create_table "assignments", force: true do |t|
     t.string   "name"
     t.string   "full_name"
-    t.string   "url"
+    t.string   "web_url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20131112235827) do
     t.string   "full_name"
     t.string   "web_url"
     t.string   "clone_url"
+    t.string   "gravatar_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,6 +77,7 @@ ActiveRecord::Schema.define(version: 20131112235827) do
     t.string   "full_name"
     t.string   "web_url"
     t.string   "clone_url"
+    t.string   "gravatar_url"
   end
 
   create_table "taggings", force: true do |t|

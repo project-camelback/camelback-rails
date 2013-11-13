@@ -37,7 +37,7 @@ class GetAssignments
       a = Assignment.create(
         :name => assignment.name,
         :full_name => assignment.full_name,
-        :url => repo_url(assignment.full_name),
+        :web_url => repo_url(assignment.full_name),
         :github_created_at => assignment.created_at
         )
 
@@ -67,8 +67,8 @@ class GetAssignments
         :student_id => s.id,
         :assignment_id => assignment.id,
         :web_url => fork.rels[:html].href,
-        :clone_url => fork.rels[:ssh].href
-        # get date?
+        :clone_url => fork.rels[:ssh].href,
+        :gravatar_url => "https://1.gravatar.com/avatar/#{fork.owner.gravatar_id}.png"
       })
       puts "  Saving #{h.full_name}."
     end
