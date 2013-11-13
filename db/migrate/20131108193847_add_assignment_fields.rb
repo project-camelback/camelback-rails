@@ -6,6 +6,9 @@ class AddAssignmentFields < ActiveRecord::Migration
     add_column :assignments, :due_date, :datetime
     add_column :assignments, :evaluation_type, :string
     add_column :assignments, :branch, :string
+    add_column :assignments, :github_created_at, :string
+    add_column :assignments, :instructor_gravatar, :string
+    add_column :assignments, :instructor_profile, :string
     #add_column :assignments, :url, :string
   end
 end
