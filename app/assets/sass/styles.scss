@@ -55,6 +55,12 @@ $light-gray: #b1b4b0;
 
   .progress {
     margin-bottom: 5px;
+    .progress-bar {
+      background-color:#c5dbfc;
+    }
+    .day {
+      color:#7c7a8a;
+    }
   }
 
   .plan-4-day {
@@ -64,6 +70,7 @@ $light-gray: #b1b4b0;
       display: inline;
       margin-top: 0;
       font-size: 14px;
+      color:$light-gray;
     }
     
     p{
