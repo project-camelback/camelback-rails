@@ -48,10 +48,10 @@ $light-gray: #b1b4b0;
 .time-line {
   //margin-bottom: 10px;
   padding: 5px 10px;
-  border: 1px solid #eeedea;
+  //border: 1px solid #eeedea;
   background-color:#fcfbf9;
   @include border-radius(6px);
-  @include box-shadow(inset);
+   @include box-shadow(rgba(black, 0.2) 0 1px 1px 1px inset);
 
   .progress {
     margin-bottom: 5px;

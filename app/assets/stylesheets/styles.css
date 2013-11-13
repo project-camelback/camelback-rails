@@ -7605,15 +7605,14 @@ td.visible-print {
 /* line 48, ../sass/styles.scss */
 .time-line {
   padding: 5px 10px;
-  border: 1px solid #eeedea;
   background-color: #fcfbf9;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: inset;
-  box-shadow: inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
 }
 /* line 56, ../sass/styles.scss */
 .time-line .progress {
