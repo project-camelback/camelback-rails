@@ -23,12 +23,7 @@
     </div>
   </div>
   </div>
-
-
-
-  
-
-  <div class="row table-top-padding">
+<div class="row table-top-padding">
   <div class="col-lg-12">
     <table class="table table-striped assignments-list">
       <thead>
@@ -39,7 +34,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @assignments.each do |assignment| %>
+        <% @student.assignments.each do |assignment| %>
         <tr>
           <td width="150"><h2><%= link_to assignment.name, assignment.web_url %></h2>
           <ul class="meta-info">

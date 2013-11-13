@@ -5,6 +5,7 @@ class AssignmentsController < ApplicationController
   # GET /assignments.json
   def index
     @student = Student.find_by(:name => current_user.login)
+
     @assignments = Assignment.all.order('github_created_at DESC')
     binding.pry
   end
