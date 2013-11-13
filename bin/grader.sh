@@ -14,8 +14,16 @@ git checkout $3
 # find ./ -name \*.rb -exec sed -i "s/binding.pry/#binding.pry/g" {} \;
 
 if [ -a Gemfile ] ; then
+  echo ${"Gemfiling "}{$1$2}
   bundle config gemfile ./Gemfile
   bundle install --verbose
+fi
+
+# if rails app, run `rake db:migrate RAILS_ENV=test`
+#   maybe also rake db:seed?
+
+if [ -a db/migrate ] ; then
+  rake db:migrate RAILS_ENV=test
 fi
 
 # --require ../../rspec_setup.rb 
