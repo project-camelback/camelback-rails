@@ -1,6 +1,6 @@
 class GradeHomeworks
   def initialize()
-    @assignments = Assignment.all
+    @assignments = Assignment.find_by(spec_present: true)
   end
 
   def call

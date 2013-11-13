@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20131113144252) do
     t.datetime "due_date"
     t.string   "evaluation_type"
     t.string   "branch"
+    t.string   "creation_date"
     t.boolean  "spec_present"
   end
 
