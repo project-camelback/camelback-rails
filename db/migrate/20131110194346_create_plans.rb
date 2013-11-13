@@ -1,7 +1,7 @@
 class CreatePlans < ActiveRecord::Migration
   def change
     create_table :plans do |t|
-      t.text :content, :limit => 1000
+      t.string :content, :limit => 1000
       t.timestamps
     end
   end
