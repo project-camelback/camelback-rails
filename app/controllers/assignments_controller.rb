@@ -4,11 +4,8 @@ class AssignmentsController < ApplicationController
   # GET /assignments
   # GET /assignments.json
   def index
-    @assignments = Assignment.all
-    binding.pry
-
-#    @assignments.sort_by &:created_at 
-
+    @assignments = Assignment.all.order('github_created_at DESC')
+    #@assignments.sort_by(&:github_created_at)
   end
 
   # GET /assignments/1

@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20131112235827) do
     t.datetime "due_date"
     t.string   "evaluation_type"
     t.string   "branch"
+    t.string   "github_created_at"
+    t.string   "instructor_gravatar"
+    t.string   "instructor_profile"
     t.string   "instructor"
   end
 
