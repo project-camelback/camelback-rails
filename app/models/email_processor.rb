@@ -6,7 +6,9 @@ class EmailProcessor < ActiveRecord::Base
 
       if subject_parse.match(/(The Plan)/)
          plan = Plan.new
-         plan.content = 'potato' #string_parse.match(/^(Day(\S|\s)+)^#/).to_s 
+         puts string_parse.match(/^(Day(\S|\s)+)^#/).to_s 
+         plan.content = string_parse.match(/^(Day(\S|\s)+)^#/).to_s
+         puts plan.content         
          plan.save
       end
 
