@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :login
+      t.string :gravatar_url
 
       t.timestamps
     end

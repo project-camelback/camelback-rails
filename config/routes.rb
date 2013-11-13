@@ -2,7 +2,7 @@ WebAppRails::Application.routes.draw do
 
   root :to => 'assignments#index'
   get 'login' => 'users#login'
-  get 'logout' => 'session#destroy', as: :signout  
+  get 'logout' => 'sessions#destroy', as: :signout  
 
 
   # OMNIAUTH
