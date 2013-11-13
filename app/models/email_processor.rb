@@ -14,10 +14,10 @@ class EmailProcessor < ActiveRecord::Base
          assignment = Assignment.new
          string_parse.match(/(https*:\/\/github.com\/(flatiron-school\/([\w-]+)))/)
          url, full_name, name = string_parse.match(/(https*:\/\/github.com\/(flatiron-school\/([\w-]+)))/).captures
-         assignment.name = name #bare repo name
-         assignment.url = url #url for flatiron fork
-         assignment.full_name = full_name #repo name with org
-         assignment.instructor = string_parse.match(/Avi Flombaum|Scott C. Reynolds|Jonathan Grover|Spencer Rogers/)
+         assignment.name = name.to_s #bare repo name
+         assignment.url = url.to_s #url for flatiron fork
+         assignment.full_name = full_name.to_s #repo name with org
+         assignment.instructor = (string_parse.match(/Avi Flombaum|Scott C. Reynolds|Jonathan Grover|Spencer Rogers/)).to_s
          assignment.save
       end
    end
