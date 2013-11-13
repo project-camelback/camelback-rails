@@ -37,7 +37,6 @@ class GetAssignments
         :github_created_at => assignment.created_at
         )
 
->>>>>>> origin
       puts "Saving #{assignment.name}."
       insert_forks(a)
       
