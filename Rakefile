@@ -9,9 +9,16 @@ task :environment do |cmd, args|
   require "./config/environment"
 end
 
-desc "Download flatiron-school assignments and add to db"
+desc "Download flatiron-school assignments and student homeworks"
 task :assignments => :environment do
   require "./lib/tasks/get_assignments"
   getter = GetAssignments.new
   getter.call
+end
+
+desc "Grade homeworks"
+task :grade => :environment do
+  require "./lib/tasks/grade_hw"
+  grader = GradeHomeworks.new
+  grader.call
 end

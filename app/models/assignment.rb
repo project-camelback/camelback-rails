@@ -55,7 +55,9 @@ class Assignment < ActiveRecord::Base
     self.url + "/blob/master/README.md"
   end
 
-  #one_to_many :assignment_submissions
+  def branch
+    "master" # see Homework.rb grader_command
+  end
 
   def pull_submissions
     github_fork = GithubForks.new(self.url)
