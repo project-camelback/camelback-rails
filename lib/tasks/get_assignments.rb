@@ -36,8 +36,6 @@ class GetAssignments
         :web_url => repo_url(assignment.full_name),
         :github_created_at => assignment.created_at
         )
-
->>>>>>> origin
       puts "Saving #{assignment.name}."
       insert_forks(a)
       
