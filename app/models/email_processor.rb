@@ -6,9 +6,12 @@ class EmailProcessor < ActiveRecord::Base
 
       if subject_parse.match(/(The Plan)/)
          plan = Plan.new 
+         body = string_parse
+         body_match = body.match(/^(Day(\S|\s)+)^#/)
+         body_match = body_match.to_s
          # Rails.logger.warn(string_parse)    
          Rails.logger.warn(string_parse.match(/^(Day(\S|\s)+)^#/).to_s)
-         plan.content = string_parse
+         plan.content = body_match
          # Rails.logger.warn(plan.content)       
          plan.save
       end
