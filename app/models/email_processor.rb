@@ -6,15 +6,15 @@ class EmailProcessor < ActiveRecord::Base
 
       if subject_parse.match(/(The Plan)/)
          plan = Plan.new 
-         Rails.logger.warn(string_parse)    
-         plan.content = string_parse.match(/^(Day(\S|\s)+)^#/)
-         Rails.logger.warn(plan.content)       
+         # Rails.logger.warn(string_parse)    
+         plan.content = string_parse.match(/^(Day(\S|\s)+)^#/).captures.to_s
+         # Rails.logger.warn(plan.content)       
          plan.save
       end
 
       if subject_parse.match(/(HW|hw|Hw|Homework|lab|Lab)/)
          assignment = Assignment.new
-         string_parse.match(/(https*:\/\/github.com\/(flatiron-school\/([\w-]+)))/)
+         # string_parse.match(/(https*:\/\/github.com\/(flatiron-school\/([\w-]+)))/)
          url, full_name, name = string_parse.match(/(https*:\/\/github.com\/(flatiron-school\/([\w-]+)))/).captures
          assignment.name = name.to_s #bare repo name
          assignment.url = url.to_s #url for flatiron fork
