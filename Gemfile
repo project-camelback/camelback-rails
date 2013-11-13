@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 # Heroku demands ruby 2.0.0
 ruby "2.0.0"
 
+gem 'pg'
 gem 'rails', '4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -25,11 +26,17 @@ group :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'annotate', ">=2.5.0" 
+  gem 'pg'
   #gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 end
 
 group :test do
   gem 'sqlite3'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
+  gem 'rack-test'
+  gem 'awesome_print'
 end
 
 group :production do
@@ -43,24 +50,7 @@ group :doc do
 end
 
 # FROM GRADER APP
-#gem 'sinatra'
-#gem 'sequel'
-#gem 'sqlite3'
-#gem 'sinatra-reloader'
 gem 'git'
-gem 'rspec'
-#gem 'pry'
-gem 'awesome_print'
 gem 'oj'
 gem 'chronic'
-gem 'colorize'
 gem 'rake'
-
-group :test do
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'terminal-notifier-guard'
-  gem 'rack-test'
-  gem 'awesome_print'
-end
-

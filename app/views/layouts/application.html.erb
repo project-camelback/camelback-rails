@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome to Homeworker</title>
+  <title>Welcome to GitDown & Son</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <script>document.write('<script src="http://' + (location.host || 'localhost')
-.split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+ 
 </head>
 <body>
-  <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -28,7 +27,7 @@
               <input type="search" placeholder="Search tags, issues..." class="form-control">
             </div>
           </form> -->
-          <ul class="nav navbar-nav nav-btn-group">
+          <!-- <ul class="nav navbar-nav nav-btn-group">
           <li>
           <div class="btn-group btn-group-sm">
         <button type="button" class="btn btn-info">All</button>
@@ -42,19 +41,16 @@
             <input type="search" class="form-control" placeholder="Search...">
           </div>
         </form></li>
-      </ul>
+      </ul> -->
           <ul class="nav navbar-nav navbar-right">
          <!--  <li> <input type="search" placeholder="Search tags, issues..." class="form-control"></li>
           <li class="divider"></li> -->
-            <li class="dropdown">
-            <% if current_user %>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.login %><b class="caret"></b></a>
+            <li class="dropdown user-info">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<img class="gravatar" src="https://2.gravatar.com/avatar/cb7a4cc2cff3810e8cc4bbf4384e3f48?d=https%3A%2F%2Fidenticons.github.com%2F3613e2acb91a57ceb105aa93fa562ebe.png&r=x&s=140" alt="andersr gravatar"> <%= current_user.login %><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Sign Out", signout_path %></li>
               </ul>
-            <% else %>
-              <%= link_to "Sign in", signin_path, class: "dropdown-toggle" %>
-            <% end %>
             </li>
           </ul>
         </div><!--/.navbar-collapse -->

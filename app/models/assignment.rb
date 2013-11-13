@@ -3,7 +3,8 @@
 # Table name: assignments
 #
 #  id              :integer          not null, primary key
-#  title           :string(255)
+#  name            :string(255)
+#  full_name       :string(255)
 #  url             :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
