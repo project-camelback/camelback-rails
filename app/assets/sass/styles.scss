@@ -46,24 +46,28 @@ $light-gray: #b1b4b0;
 // ----------------------------
 
 .time-line {
-  margin-bottom: 10px;
-  padding: 5px;
+  //margin-bottom: 10px;
+  padding: 5px 10px;
   border: 1px solid #eeedea;
   background-color:#fcfbf9;
   @include border-radius(6px);
- @include box-shadow(inset);
+  @include box-shadow(inset);
 
- .plan-4-day {
-  margin-bottom: 5px;
-
-  h2 {
-       display: inline;
-    margin-top: 0;
-    font-size: 14px;
+  .progress {
+    margin-bottom: 5px;
   }
+
+  .plan-4-day {
+    margin-bottom: 5px;
+
+    h2 {
+      display: inline;
+      margin-top: 0;
+      font-size: 14px;
+    }
+    
     p{
       color:$light-gray;
- 
       display: inline;
     }
 
@@ -71,7 +75,7 @@ $light-gray: #b1b4b0;
       margin-left: 10px;
       display: inline;
       padding-left: 0;
-      
+        
       li {
         font-size: 12px;
         margin-right: 10px;

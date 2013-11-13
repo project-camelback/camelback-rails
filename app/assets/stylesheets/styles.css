@@ -7604,8 +7604,7 @@ td.visible-print {
 
 /* line 48, ../sass/styles.scss */
 .time-line {
-  margin-bottom: 10px;
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid #eeedea;
   background-color: #fcfbf9;
   -webkit-border-radius: 6px;
@@ -7617,27 +7616,31 @@ td.visible-print {
   box-shadow: inset;
 }
 /* line 56, ../sass/styles.scss */
+.time-line .progress {
+  margin-bottom: 5px;
+}
+/* line 60, ../sass/styles.scss */
 .time-line .plan-4-day {
   margin-bottom: 5px;
 }
-/* line 59, ../sass/styles.scss */
+/* line 63, ../sass/styles.scss */
 .time-line .plan-4-day h2 {
   display: inline;
   margin-top: 0;
   font-size: 14px;
 }
-/* line 64, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 .time-line .plan-4-day p {
   color: #b1b4b0;
   display: inline;
 }
-/* line 70, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 .time-line .plan-4-day ol {
   margin-left: 10px;
   display: inline;
   padding-left: 0;
 }
-/* line 75, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 .time-line .plan-4-day ol li {
   font-size: 12px;
   margin-right: 10px;
@@ -7645,63 +7648,63 @@ td.visible-print {
   display: inline;
 }
 
-/* line 90, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 table.table thead th {
   color: #b1b4b0;
   font-weight: 300;
 }
-/* line 96, ../sass/styles.scss */
+/* line 100, ../sass/styles.scss */
 table.table tbody td {
   vertical-align: middle;
 }
-/* line 98, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 table.table tbody td .progress {
   margin-bottom: 0;
 }
 
-/* line 106, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 .assignments-list h2 {
   font-size: 20px;
   margin-top: 4px;
   margin-bottom: 2px;
 }
 
-/* line 112, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 .table-top-padding {
   padding-top: 20px;
 }
 
-/* line 115, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 .issue {
   color: #b4b1ab;
   font-size: 10px;
   line-height: 3px;
 }
 
-/* line 122, ../sass/styles.scss */
+/* line 126, ../sass/styles.scss */
 ul.meta-info {
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 127, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 ul.meta-info li {
   display: inline;
   font-size: 10px;
   color: #b1b4b0;
   margin-right: 3px;
 }
-/* line 133, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 ul.meta-info li a {
   color: #b1b4b0;
 }
-/* line 136, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #ffffff;
   font-weight: 300;
 }
 
-/* line 143, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .editable_area {
   padding: 5px;
   border: 1px solid #e8ebeb;
@@ -7713,30 +7716,30 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #b1b4b0;
   font-size: 10px;
 }
-/* line 150, ../sass/styles.scss */
+/* line 154, ../sass/styles.scss */
 .editable_area:hover {
   cursor: pointer;
   background-color: #f2f5f5;
 }
 
-/* line 156, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 .status {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 161, ../sass/styles.scss */
+/* line 165, ../sass/styles.scss */
 .align-middle {
   vertical-align: middle;
 }
 
-/* line 167, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 .issues {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 176, ../sass/styles.scss */
+/* line 180, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7746,12 +7749,12 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   text-align: center;
 }
 
-/* line 184, ../sass/styles.scss */
+/* line 188, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
 }
 
-/* line 191, ../sass/styles.scss */
+/* line 195, ../sass/styles.scss */
 .gravatar {
   height: 20px;
   -webkit-border-radius: 4px;
