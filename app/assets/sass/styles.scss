@@ -16,21 +16,21 @@ $light-gray: #b1b4b0;
 
 // NAVBAR
 // ----------------------------
-.nav-btn-group {
-  margin-left: 10px;
-  margin-top: 10px;
-  font-size:smaller;
+  .nav-btn-group {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size:smaller;
 
-  .navbar-form {
-  margin-top: -1px;
-  margin-left: 10px;
+    .navbar-form {
+    margin-top: -1px;
+    margin-left: 10px;
 
-    & input {
-      font-size: 14px;
-      padding: 0px 8px;
+      & input {
+        font-size: 14px;
+        padding: 0px 8px;
+      }
     }
   }
-}
 
 // USER INFO
 // ----------------------------
@@ -44,32 +44,43 @@ $light-gray: #b1b4b0;
 
 // PLAN FOR DAY
 // ----------------------------
- .plan-4-day {
-  margin-bottom: 20px;
 
+.time-line {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #eeedea;
+  background-color:#fcfbf9;
+  @include border-radius(6px);
+ @include box-shadow(inset);
+
+ .plan-4-day {
+  margin-bottom: 5px;
 
   h2 {
-    color:$light-gray;
-    display: inline;
+       display: inline;
     margin-top: 0;
     font-size: 14px;
   }
-  p{ display: inline;
-  }
-
-  ol {
-    margin-left: 10px;
-    display: inline;
-    padding-left: 0;
-    
-    li {
-      font-size: 12px;
-      margin-right: 10px;
-      padding-left: 0;
+    p{
+      color:$light-gray;
+ 
       display: inline;
     }
+
+    ol {
+      margin-left: 10px;
+      display: inline;
+      padding-left: 0;
+      
+      li {
+        font-size: 12px;
+        margin-right: 10px;
+        padding-left: 0;
+        display: inline;
+      }
+    }
   }
- }
+}
 
 
 // ASSIGNMENTS VIEW
