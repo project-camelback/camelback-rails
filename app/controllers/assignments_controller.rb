@@ -11,7 +11,6 @@ class AssignmentsController < ApplicationController
     if @plan
       @percent = ((@plan.day_number.to_f/60).to_f)*100
     end
-    Homework.get_most_recent_issue(session[:token], current_user)
   end
 
   # GET /assignments/1
