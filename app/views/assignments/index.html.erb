@@ -36,7 +36,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @student.assignments.each do |assignment| %>
+        <% @student.assignments.each_with_index do |assignment,i| %>
         <tr>
           <td width="150"><h2><%= link_to assignment.name, assignment.web_url %></h2>
             <ul class="meta-info">
@@ -49,30 +49,20 @@
         </td>
         <td>
           <span class="status">Not Started &raquo;</span> <a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/fork" class="btn btn-default btn-sm" role="button">Fork</a>
-         <!--  <div class="progress">
-          <div class="progress-bar progress-bar-success" style="width: 30%">
-            <span>5 Passing</span>
+          <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width:<%= @tests[i][:passing_percentage] %>">
             </div>
-            <div class="progress-bar progress-bar-warning" style="width: 30%">
-              <span>5</span>
+            <div class="progress-bar progress-bar-warning" style="width:<%= @tests[i][:pending_percentage] %>">
             </div>
-          <div class="progress-bar progress-bar-danger" style="width: 40%">
-            <span>4</span>
-          </div> -->
+          <div class="progress-bar progress-bar-danger" style="width:<%= @tests[i][:failing_percentage] %>">
+          </div>
+          <p>Passing:</p>
         </td>
         <% @homework = Homework.where("assignment_id = ? AND student_id = ?", assignment.id, @student.id).first %>
         <td class="issues"><p><%= @homework.current_issue %><a href="#" class="btn btn-default btn-xs" role="button">New Issue</a></p>
-          <!-- <ul class="meta-info">
-            <li>Latest commit: <a href="#" title="">update gitignore</a></li>
-            <li>Issue: <a href="https://github.com/flatiron-school/pollywog-ranch-associations-ruby-003/issues" title="">Bug in the Tadpole Show View</a>
-              </li><li><a href="#" title="">New Issue</a>
-                </li>
-            </ul>
-          -->
-
+         <% end %>
         </td>
-      </tr>
-      <% end %>    
+      </tr>   
       <tr>
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>

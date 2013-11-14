@@ -25,6 +25,31 @@ class Homework < ActiveRecord::Base
   belongs_to :student
   belongs_to :assignment
 
+  def self.get_specs(student)
+    @homeworks = Homework.where(:student_id => student.id)
+    @tests = []
+
+    @homeworks.each_with_index do |homework,i|
+      @tests[i] = {}
+      if homework.assignment.spec_present?
+        @tests[i][:passing] = homework.passes ||= 0
+        @tests[i][:pending] = homework.pendings  ||= 0
+        @tests[i][:failing] = homework.failures ||= 0
+
+        test_total = @tests[i][:passing].to_int + @tests[i][:pending].to_int + @tests[i][:failing].to_int
+
+        if test_total != 0
+          @tests[i][:passing_percentage] =  @tests[i][:passing]/test_total
+          @tests[i][:pending_percentage] =  @tests[i][:pending]/test_total
+          @tests[i][:failing_percentage] =  @tests[i][:failing]/test_total
+        end
+      else
+        @tests[i][:no_test]
+      end
+    end
+      return @tests
+  end
+
   def self.get_most_recent_issue(token, user)
     client = Octokit::Client.new(:access_token => token)
     student = Student.find_by(name: user.login)
