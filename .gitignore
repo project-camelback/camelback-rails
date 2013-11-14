@@ -18,3 +18,5 @@
 
 .DS_Store
 db/.DS_Store
+/presentation/*
+/mockups/*
