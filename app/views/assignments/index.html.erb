@@ -30,15 +30,27 @@
     <table class="table table-striped assignments-list">
       <thead>
         <tr>
-          <th width="150">Assignment</th>
-          <th width="130">Progress</th>
+          <th width="15">Rspec</th>
+          <th width="165">Assignment</th>
+          <th width="100">Progress</th>
           <th width="234"><!-- Issues --><span class="glyphicon glyphicon-comment"></span></th>
         </tr>
       </thead>
       <tbody>
         <% @student.assignments.each do |assignment| %>
         <tr>
-          <td width="150"><h2><%= link_to assignment.name, "http://github.com/#{current_user.login}/#{assignment.name}" %></h2>
+
+          <td width="15">
+            <% if assignment.spec_present %>
+              <%= form_tag '/homeworks/rspec' do %>
+                <input name="assignment_id" value="<%= assignment.id %>" type="hidden" />
+                <input name="student_id" value="<%= @student.id %>" type="hidden" />
+                <button type="submit" class="btn btn-info btn-small"><i class="icon-bar-chart"></i></button>
+              <% end %>
+            <% end %>
+          </td>
+          <td width="165"><h2><%= link_to assignment.name, assignment.web_url %></h2>
+
             <ul class="meta-info">
               <li><a href="#" title=""><img class="gravatar" src="<%# @homework.gravatar_url %>" alt=""> Scott</a></li>
               <li><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/blob/master/README.md" title="">README.md</a>
@@ -48,8 +60,8 @@
 
         </td>
         <td>
-          <span class="status">Not Started &raquo;</span> <a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/fork" class="btn btn-default btn-sm" role="button">Fork</a>
-         <!--  <div class="progress">
+          <!-- <span class="status">Not Started &raquo;</span> <a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/fork" class="btn btn-default btn-sm" role="button">Fork</a> -->
+          <div class="progress">
           <div class="progress-bar progress-bar-success" style="width: 30%">
             <span>5 Passing</span>
             </div>
@@ -58,7 +70,7 @@
             </div>
           <div class="progress-bar progress-bar-danger" style="width: 40%">
             <span>4</span>
-          </div> -->
+          </div>
         </td>
         <% @homework = Homework.where("assignment_id = ? AND student_id = ?", assignment.id, @student.id).first %>
         <td class="issues"><p><%= @homework.current_issue %><a href="#" class="btn btn-default btn-xs" role="button">New Issue</a></p>
@@ -73,7 +85,10 @@
         </td>
       </tr>
       <% end %>    
-     <!--  <tr>
+
+
+      <!-- <tr>
+
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>
           <ul class="meta-info">
