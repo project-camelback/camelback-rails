@@ -17,7 +17,9 @@ class ApplicationController < ActionController::Base
         redirect_to login_path
       else
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
+        @grav_url = Student.find_by(:name => current_user.login).assignments.first.gravatar_url
       end
     end
     helper_method :current_user
+
 end
