@@ -2,13 +2,13 @@
   <div class="col-lg-12">
     <div class="time-line">
       <div class="plan-4-day">
-        <h2>"The Plan" - Day 36:</h2> <p>9-9:30: Do stuff&nbsp;&nbsp;&nbsp;&nbsp; 9:30-10: Todo: Cat vs Bread?&nbsp;&nbsp;&nbsp;&nbsp; 10ish: Guest Speaker&nbsp;&nbsp;&nbsp;&nbsp; Lunch&nbsp;&nbsp;&nbsp;&nbsp; Lab: Spell Checker</p>
+        <h2>The Plan: <%= @plan.date %></h2> <p><%= @plan.content %> </p>
       </div>
 
       <div class="course-timeline">
         <div class="progress">
-          <div class="progress-bar" style="width: 64%">
-            <span class="day">Day 36</span>
+          <div class="progress-bar" style="width: <%= @percent %>%">
+            <span class="day">Day: <%= @plan.day_number %></span>
           </div>
         </div>
       </div>
@@ -21,10 +21,7 @@
   <div class="progress-bar progress-bar-danger" style="width: 10%">
     <span class="sr-only">10% Complete (danger)</span>
   </div> -->
-</div>
-</div>
-</div>
-</div>
+
 <div class="row table-top-padding">
   <div class="col-lg-12">
     <table class="table table-striped assignments-list">
@@ -39,6 +36,7 @@
       <tbody>
         <% @student.assignments.each do |assignment| %>
         <tr>
+
           <td width="15">
             <% if assignment.spec_present %>
               <%= form_tag '/homeworks/rspec' do %>
@@ -49,6 +47,7 @@
             <% end %>
           </td>
           <td width="165"><h2><%= link_to assignment.name, assignment.web_url %></h2>
+
             <ul class="meta-info">
 <!--               <li><a href="#" title=""><img class="gravatar" src="<%# @homework.gravatar_url %>" alt=""> Scott</a></li>
               <li><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/blob/master/README.md" title="">README.md</a>
@@ -89,7 +88,10 @@
         </td>
       </tr>
       <% end %>    
+
+
       <!-- <tr>
+
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>
           <ul class="meta-info">

@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 20131114062508) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "date"
+    t.integer  "day_number"
   end
 
   create_table "students", force: true do |t|
