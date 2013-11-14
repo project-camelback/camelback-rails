@@ -40,10 +40,12 @@
         <% @student.assignments.each do |assignment| %>
         <tr>
           <td width="15">
-            <%= form_tag '/homeworks/rspec' do %>
-              <input name="assignment_id" value="<%= assignment.id %>" type="hidden" />
-              <input name="student_id" value="<%= @student.id %>" type="hidden" />
-              <button type="submit" class="btn btn-info btn-small"><i class="icon-bar-chart"></i></button>
+            <% if assignment.spec_present %>
+              <%= form_tag '/homeworks/rspec' do %>
+                <input name="assignment_id" value="<%= assignment.id %>" type="hidden" />
+                <input name="student_id" value="<%= @student.id %>" type="hidden" />
+                <button type="submit" class="btn btn-info btn-small"><i class="icon-bar-chart"></i></button>
+              <% end %>
             <% end %>
           </td>
           <td width="165"><h2><%= link_to assignment.name, assignment.web_url %></h2>
