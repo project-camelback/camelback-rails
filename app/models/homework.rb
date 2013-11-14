@@ -2,15 +2,23 @@
 #
 # Table name: homeworks
 #
-#  id            :integer          not null, primary key
-#  student_id    :integer
-#  assignment_id :integer
-#  name          :string(255)
-#  full_name     :string(255)
-#  web_url       :string(255)
-#  clone_url     :string(255)
-#  created_at    :datetime
-#  updated_at    :datetime
+#  id                   :integer          not null, primary key
+#  student_id           :integer
+#  assignment_id        :integer
+#  name                 :string(255)
+#  full_name            :string(255)
+#  web_url              :string(255)
+#  clone_url            :string(255)
+#  gravatar_url         :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  evaluated            :boolean
+#  examples             :integer
+#  passes               :integer
+#  pendings             :integer
+#  failures             :integer
+#  failure_descriptions :string(255)
+#  evaluation_date      :string(255)
 #
 
 class Homework < ActiveRecord::Base

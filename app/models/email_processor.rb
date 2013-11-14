@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: email_processors
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#  to         :string(255)
+#  from       :string(255)
+#  subject    :string(255)
+#  body       :string(255)
+#
+
 class EmailProcessor < ActiveRecord::Base
    def self.process(email)
       

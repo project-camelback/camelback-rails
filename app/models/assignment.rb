@@ -2,17 +2,22 @@
 #
 # Table name: assignments
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)
-#  full_name       :string(255)
-#  url             :string(255)
-#  created_at      :datetime
-#  updated_at      :datetime
-#  description     :string(255)
-#  post_date       :datetime
-#  due_date        :datetime
-#  evaluation_type :string(255)
-#  branch          :string(255)
+#  id                  :integer          not null, primary key
+#  name                :string(255)
+#  full_name           :string(255)
+#  web_url             :string(255)
+#  created_at          :datetime
+#  updated_at          :datetime
+#  description         :string(255)
+#  post_date           :datetime
+#  due_date            :datetime
+#  evaluation_type     :string(255)
+#  branch              :string(255)
+#  github_created_at   :string(255)
+#  instructor_gravatar :string(255)
+#  instructor_profile  :string(255)
+#  instructor          :string(255)
+#  spec_present        :boolean          default(FALSE)
 #
 
 class Assignment < ActiveRecord::Base
