@@ -8,7 +8,7 @@ class AssignmentsController < ApplicationController
     @assignments = Assignment.all.order('github_created_at DESC')
     Homework.get_most_recent_issue(session[:token], current_user) if session[:token]
     @plan = Plan.last
-    @percent = (@plan.day_number/60).to_i
+    @percent = (@plan.day_number.to_f/60).to_f
   end
 
   # GET /assignments/1
