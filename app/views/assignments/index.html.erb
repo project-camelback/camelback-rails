@@ -38,7 +38,7 @@
       <tbody>
         <% @student.assignments.each do |assignment| %>
         <tr>
-          <td width="150"><h2><%= link_to assignment.name, assignment.web_url %></h2>
+          <td width="150"><h2><%= link_to assignment.name, "http://github.com/#{current_user.login}/#{assignment.name}" %></h2>
             <ul class="meta-info">
               <li><a href="#" title=""><img class="gravatar" src="<%# @homework.gravatar_url %>" alt=""> Scott</a></li>
               <li><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/blob/master/README.md" title="">README.md</a>
@@ -73,7 +73,7 @@
         </td>
       </tr>
       <% end %>    
-      <tr>
+     <!--  <tr>
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>
           <ul class="meta-info">
@@ -166,7 +166,7 @@
             </div></a></td>
             <td>
               <div class="editable_area" id="github_issue_id">GitHub Issues (None posted. Click to Add)</div></td>
-            </tr>
+            </tr> -->
 
           </tbody>
         </table>
