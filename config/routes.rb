@@ -13,6 +13,7 @@ WebAppRails::Application.routes.draw do
   get '/signin' => redirect('/auth/github')
   #get '/signout', to: 'sessions#destroy', as: :signout
 
+  post '/homeworks/rspec', to: 'homeworks#rspec'
 
   resources :plans
   resources :mockups
