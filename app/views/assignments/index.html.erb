@@ -2,13 +2,13 @@
   <div class="col-lg-12">
     <div class="time-line">
       <div class="plan-4-day">
-        <h2>"The Plan" - Day 36:</h2> <p><%= @plan.content %> </p>
+        <h2>The Plan: <%= @plan.date %></h2> <p><%= @plan.content %> </p>
       </div>
 
       <div class="course-timeline">
         <div class="progress">
           <div class="progress-bar" style="width: 64%">
-            <span class="day">Day 36</span>
+            <span class="day"><%= @plan.date %></span>
           </div>
         </div>
       </div>
