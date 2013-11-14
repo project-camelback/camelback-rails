@@ -22,7 +22,6 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.login = auth["info"]["nickname"]
-      puts auth["info"].inspect
       # user.gravatar_url = auth["info"]["image"]
     end
   end   
