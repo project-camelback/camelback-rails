@@ -53,7 +53,6 @@ class Homework < ActiveRecord::Base
   def self.get_most_recent_issue(token, user)
     client = Octokit::Client.new(:access_token => token)
     student = Student.find_by(name: user.login)
-
     student_repos = client.repos
 
     student_repos.each do |repo|
