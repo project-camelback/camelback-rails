@@ -7,7 +7,7 @@
 
       <div class="course-timeline">
         <div class="progress">
-          <div class="progress-bar" style="width: <%= @plan.day_number %>%">
+          <div class="progress-bar" style="width: <%= (@plan.day_number/60) %>%">
             <span class="day"><%= @plan.date %></span>
           </div>
         </div>
