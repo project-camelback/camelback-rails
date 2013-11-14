@@ -15,6 +15,8 @@
     </div>
   </div>
 </div>
+<%= GithubFeed.get_feed[0].title %>
+<%= GithubFeed.get_feed[0].url %>
   <!-- <div class="progress-bar progress-bar-warning" style="width: 20%">
     <span class="sr-only">20% Complete (warning)</span>
   </div>
@@ -49,15 +51,9 @@
           <td width="165"><h2><%= link_to assignment.name, assignment.web_url %></h2>
 
             <ul class="meta-info">
-<!--               <li><a href="#" title=""><img class="gravatar" src="<%# @homework.gravatar_url %>" alt=""> Scott</a></li>
+              <li><a href="#" title=""><img class="gravatar" src="<%# @homework.gravatar_url %>" alt=""> Scott</a></li>
               <li><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/blob/master/README.md" title="">README.md</a>
-              </li> -->
-                <% unless assignment.tags.empty? %>
-                  <% assignment.tags.each do |tag| %>
-                    <li><span class="label label-default">
-                    <span class="glyphicon glyphicon-tag"></span>&nbsp;<a href="#" title=""><%= tag.name %></a></span>
-                  <% end %>
-                <% end %>
+              </li><li><span class="label label-default"><span class="glyphicon glyphicon-tag"></span>&nbsp;<a href="#" title="">ORM</a></span> <span class="label label-default"><span class="glyphicon glyphicon-tag"></span>&nbsp;<a href="#" title="">ActiveRecord</a></span>
             </li>
           </ul>
 
