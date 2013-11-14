@@ -68,6 +68,23 @@ class Assignment < ActiveRecord::Base
     "tmp/#{self.name}"
   end
 
+  def fork_url
+    self.web_url + "/fork"
+  end
+
+  def graded_homework_of(student_obj)
+    hw = Homework.where(:student_id => student_obj.id).where(:assignment_id => self.id)
+    if hw
+      hw = hw.first
+      if hw.examples
+        if hw.examples > 0
+          return hw
+        end
+      end
+    end
+    return nil
+  end
+
   def self.generate_tags(assignment)
     tags_array = tags_from_readme(assignment)
     tags_array << DEFAULT_GENERATE_TAGS_LIST.select {|tag| assignment.full_name.include?(tag) && !tags_array.include?(tag) }
