@@ -6,7 +6,7 @@ class AssignmentsController < ApplicationController
   def index
     @student = Student.find_by(:name => current_user.login)
     @assignments = Assignment.all.order('github_created_at DESC')
-    Homework.get_most_recent_issue(session[:token], current_user) 
+    Homework.get_most_recent_issue(session[:token], current_user) if session[:token]
   end
 
   # GET /assignments/1
