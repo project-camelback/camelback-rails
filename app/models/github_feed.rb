@@ -6,14 +6,12 @@ class GithubFeed < ActiveRecord::Base
 
   def self.get_feed
     feed = define_feed
-    feed.entries.each do |entry|
-      entry[].title + feed.entries[0].url
-    feed
+    feed.entries.last
   end
 
 end
 
-# add to view: <%= GithubFeed.get_feed[0].title %>
+# add to view: <%= GithubFeed.get_feed.title %>
 
 
 
