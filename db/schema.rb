@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131112225456) do
+ActiveRecord::Schema.define(version: 20131113144252) do
 
   create_table "assignments", force: true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20131112225456) do
     t.string   "instructor_gravatar"
     t.string   "instructor_profile"
     t.string   "instructor"
+    t.boolean  "spec_present",        default: false
   end
 
   create_table "email_processors", force: true do |t|
@@ -49,6 +50,13 @@ ActiveRecord::Schema.define(version: 20131112225456) do
     t.string   "gravatar_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "evaluated"
+    t.integer  "examples"
+    t.integer  "passes"
+    t.integer  "pendings"
+    t.integer  "failures"
+    t.string   "failure_descriptions"
+    t.string   "evaluation_date"
   end
 
   create_table "mockups", force: true do |t|
