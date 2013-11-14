@@ -60,7 +60,8 @@
             <span>4</span>
           </div> -->
         </td>
-        <td class="issues"><p>No issues to show. <a href="#" class="btn btn-default btn-xs" role="button">New Issue</a></p>
+        <% @homework = Homework.where("assignment_id = ? AND student_id = ?", assignment.id, @student.id).first %>
+        <td class="issues"><p><%= @homework.current_issue %><a href="#" class="btn btn-default btn-xs" role="button">New Issue</a></p>
           <!-- <ul class="meta-info">
             <li>Latest commit: <a href="#" title="">update gitignore</a></li>
             <li>Issue: <a href="https://github.com/flatiron-school/pollywog-ranch-associations-ruby-003/issues" title="">Bug in the Tadpole Show View</a>
@@ -71,7 +72,7 @@
 
         </td>
       </tr>
-      <% end %>     
+      <% end %>    
       <tr>
         <td width="150">
           <h2><a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003" title="">TV Land</a></h2>
