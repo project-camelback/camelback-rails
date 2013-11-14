@@ -7570,39 +7570,29 @@ td.visible-print {
     display: none !important;
   }
 }
-/* line 6, ../sass/styles.scss */
-html, body {
-  height: 100%;
-}
-
-/* line 16, ../sass/styles.scss */
+/* line 14, ../sass/styles.scss */
 .container-top-padding {
   padding-top: 65px;
 }
 
-/* line 20, ../sass/styles.scss */
-.max-height {
-  height: 100%;
-}
-
-/* line 26, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 .nav-btn-group {
   margin-left: 10px;
   margin-top: 10px;
   font-size: smaller;
 }
-/* line 31, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 .nav-btn-group .navbar-form {
   margin-top: -1px;
   margin-left: 10px;
 }
-/* line 35, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 .nav-btn-group .navbar-form input {
   font-size: 14px;
   padding: 0px 8px;
 }
 
-/* line 45, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .user-info .gravatar {
   margin-right: 3px;
   -webkit-border-radius: 4px;
@@ -7612,7 +7602,15 @@ html, body {
   border-radius: 4px;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
+.empty-cell {
+  width: 100%;
+  padding-left: 20%;
+  font-size: 9px;
+  color: #b1b4b0;
+}
+
+/* line 57, ../sass/styles.scss */
 .feed {
   padding: 5px 10px;
   background-color: #fcfbf9;
@@ -7624,14 +7622,14 @@ html, body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
 }
-/* line 63, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 .feed h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
   color: #b1b4b0;
 }
-/* line 70, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 .feed p {
   border-top: 1px solid #ebe3e1;
   padding-top: 4px;
@@ -7641,7 +7639,7 @@ html, body {
   font-size: 11px;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 .time-line {
   margin-bottom: 10px;
   padding: 5px 15px;
@@ -7654,42 +7652,43 @@ html, body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
 }
-/* line 97, ../sass/styles.scss */
+/* line 101, ../sass/styles.scss */
 .time-line .progress {
   margin-bottom: 5px;
 }
-/* line 99, ../sass/styles.scss */
-.time-line .progress .progress-bar {
-  background-color: #c5dbfc;
-  height: 10px;
-}
 /* line 103, ../sass/styles.scss */
-.time-line .progress .day {
-  color: #7c7a8a;
+.time-line .progress .progress-bar {
+  background-color: #bae5b5;
 }
-/* line 108, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
+.time-line .progress .day {
+  float: right;
+  margin-right: 5px;
+  color: #ffffff;
+}
+/* line 115, ../sass/styles.scss */
 .time-line .plan-4-day {
   margin-bottom: 5px;
 }
-/* line 111, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .time-line .plan-4-day h2 {
   display: inline;
   margin-top: 0;
   font-size: 14px;
   color: #b1b4b0;
 }
-/* line 118, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .time-line .plan-4-day p {
   color: #b1b4b0;
   display: inline;
 }
-/* line 123, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 .time-line .plan-4-day ol {
   margin-left: 10px;
   display: inline;
   padding-left: 0;
 }
-/* line 128, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .time-line .plan-4-day ol li {
   font-size: 12px;
   margin-right: 10px;
@@ -7697,63 +7696,65 @@ html, body {
   display: inline;
 }
 
-/* line 143, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 table.table thead th {
   color: #b1b4b0;
   font-weight: 300;
 }
-/* line 149, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 table.table tbody td {
   vertical-align: middle;
 }
-/* line 151, ../sass/styles.scss */
+/* line 158, ../sass/styles.scss */
 table.table tbody td .progress {
   margin-bottom: 0;
 }
 
-/* line 159, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .assignments-list h2 {
   font-size: 20px;
   margin-top: 4px;
   margin-bottom: 2px;
 }
 
-/* line 165, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 .table-top-padding {
   padding-top: 20px;
 }
 
-/* line 168, ../sass/styles.scss */
+/* line 175, ../sass/styles.scss */
 .issue {
   color: #b4b1ab;
   font-size: 10px;
   line-height: 3px;
 }
 
-/* line 175, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 ul.meta-info {
+  margin-left: 0;
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 180, ../sass/styles.scss */
+/* line 188, ../sass/styles.scss */
 ul.meta-info li {
   display: inline;
   font-size: 10px;
   color: #b1b4b0;
   margin-right: 3px;
 }
-/* line 186, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 ul.meta-info li a {
   color: #b1b4b0;
 }
-/* line 189, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #ffffff;
   font-weight: 300;
+  text-transform: capitalize;
 }
 
-/* line 196, ../sass/styles.scss */
+/* line 205, ../sass/styles.scss */
 .editable_area {
   padding: 5px;
   border: 1px solid #e8ebeb;
@@ -7765,30 +7766,30 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #b1b4b0;
   font-size: 10px;
 }
-/* line 203, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 .editable_area:hover {
   cursor: pointer;
   background-color: #f2f5f5;
 }
 
-/* line 209, ../sass/styles.scss */
+/* line 218, ../sass/styles.scss */
 .status {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 214, ../sass/styles.scss */
+/* line 223, ../sass/styles.scss */
 .align-middle {
   vertical-align: middle;
 }
 
-/* line 220, ../sass/styles.scss */
+/* line 229, ../sass/styles.scss */
 .issues {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 229, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7798,12 +7799,12 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   text-align: center;
 }
 
-/* line 237, ../sass/styles.scss */
+/* line 246, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
 }
 
-/* line 244, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 .gravatar {
   height: 20px;
   -webkit-border-radius: 4px;

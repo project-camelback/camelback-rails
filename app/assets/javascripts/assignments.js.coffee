@@ -3,5 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$(".time-line").equalHeightColumns
-
+$(".timeline-column").css height: $(".feed-column").height()

@@ -3,9 +3,7 @@
 @import "bootstrap";
 
 
-html, body {
-  height: 100%;
-}
+
 // VARIABLES
 // ----------------------------
 $light-gray: #b1b4b0;
@@ -17,9 +15,6 @@ $light-gray: #b1b4b0;
   padding-top:65px;
 }
 
-.max-height {
-  height: 100%;
-}
 
 // NAVBAR
 // ----------------------------
@@ -46,6 +41,15 @@ $light-gray: #b1b4b0;
     margin-right: 3px;
     @include border-radius(4px);
   }
+}
+
+// EMPTY CELL
+// ----------------------------
+.empty-cell {
+  width: 100%;
+  padding-left: 20%;
+  font-size: 9px;
+  color: $light-gray;
 }
 
 // PLAN FOR DAY
@@ -97,11 +101,14 @@ $light-gray: #b1b4b0;
   .progress {
     margin-bottom: 5px;
     .progress-bar {
-      background-color:#c5dbfc;
-      height: 10px;
+      background-color:#bae5b5;
+      //height: 10px;
     }
     .day {
-      color:#7c7a8a;
+      //color:#7c7a8a;
+      float: right;
+      margin-right: 5px;
+      color:#ffffff;
     }
   }
 
@@ -173,6 +180,7 @@ table.table {
 }
 
 ul.meta-info {
+  margin-left: 0;
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -189,6 +197,7 @@ ul.meta-info {
     span.badge a, span.label a  {
       color:#ffffff;
       font-weight: 300;
+      text-transform: capitalize;
     }
   }
 }
