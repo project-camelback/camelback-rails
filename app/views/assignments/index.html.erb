@@ -21,7 +21,7 @@
     <div class="feed">
     <h2>Live from Github...</h2>
       <% GithubFeed.get_feed.each do |entry| %>
-       <p><a href="<%= entry.url %>" title=""><%= entry.title %>...</a></p>
+       <p><a href="<%= entry.url %>" title=""><%= entry.title[0..60] %>...</a></p>
       <% end %>
     </div>
   </div><!-- end col 2 -->
