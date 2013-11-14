@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(auth_hash)
     session[:user_id] = user.id
+    session[:token] = auth_hash[:credentials][:token]
     redirect_to root_path, notice: "Signed in"
   end
 

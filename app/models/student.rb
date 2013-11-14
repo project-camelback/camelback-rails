@@ -17,6 +17,7 @@
 #  full_name       :string(255)
 #  web_url         :string(255)
 #  clone_url       :string(255)
+#  gravatar_url    :string(255)
 #
 
 class Student < ActiveRecord::Base

@@ -6,15 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Assignments_to_Run_RSpec = [
-# assignment names
+ASSIGNMENTS_TO_RUN_RSPEC = [
+'playlister-rb',
+'003-School-Domain',
+'structured-learning',
+'rps-game-app',
+'sinatra-rspec-intro-ruby-003',
+'using-bundler-ruby-003',
+'sinatra-students-ruby-003',
+'sinatra-orm-halloween-ruby-003',
+'ruby-003-unit-2',
+'activerecord-tvland-ruby-003',
+'the-big-todo-ruby-003',
+'playlister-rails'
 ]
 
 Assignment.all.each do |assignment|
-  if Assignments_to_Run_RSpec.include? assignment.name 
+  if ASSIGNMENTS_TO_RUN_RSPEC.include? assignment.name 
     assignment.spec_present = true
-  else
-    assignment.spec_present = false
+    assignment.save
   end
-  assignment.save
 end
