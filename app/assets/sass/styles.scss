@@ -2,6 +2,10 @@
 @import "compass";
 @import "bootstrap";
 
+
+html, body {
+  height: 100%;
+}
 // VARIABLES
 // ----------------------------
 $light-gray: #b1b4b0;
@@ -80,14 +84,16 @@ $light-gray: #b1b4b0;
 // ----------------------------
 
 .time-line {
-  height: 100%;
-  //margin-bottom: 10px;
+  //height: 100%;
+  margin-bottom: 10px;
   padding: 5px 15px;
   //border: 1px solid #eeedea;
   background-color:#fcfbf9;
   @include border-radius(6px);
    @include box-shadow(rgba(black, 0.2) 0 1px 1px 1px inset);
+  padding-bottom: 100px;
 
+   
   .progress {
     margin-bottom: 5px;
     .progress-bar {
