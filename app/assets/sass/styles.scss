@@ -2,6 +2,8 @@
 @import "compass";
 @import "bootstrap";
 
+
+
 // VARIABLES
 // ----------------------------
 $light-gray: #b1b4b0;
@@ -41,25 +43,72 @@ $light-gray: #b1b4b0;
   }
 }
 
+// EMPTY CELL
+// ----------------------------
+.empty-cell {
+  width: 100%;
+  padding-left: 20%;
+  font-size: 9px;
+  color: $light-gray;
+}
 
 // PLAN FOR DAY
 // ----------------------------
-
-.time-line {
-  //margin-bottom: 10px;
+.feed {
+    //font-size: 9px;
+     //margin-bottom: 10px;
   padding: 5px 10px;
   //border: 1px solid #eeedea;
   background-color:#fcfbf9;
   @include border-radius(6px);
    @include box-shadow(rgba(black, 0.2) 0 1px 1px 1px inset);
 
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+      font-size: 14px;
+      color:$light-gray;
+    }
+
+    p {
+      border-top: 1px solid #ebe3e1;
+      padding-top: 4px;
+      margin-top: 3px;
+    margin-bottom: 2px;
+    //line-height: 12px;
+    text-transform: capitalize;
+    font-size: 11px;
+    }
+
+}
+
+
+// PLAN FOR DAY
+// ----------------------------
+
+.time-line {
+  //height: 100%;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  //border: 1px solid #eeedea;
+  background-color:#fcfbf9;
+  @include border-radius(6px);
+   @include box-shadow(rgba(black, 0.2) 0 1px 1px 1px inset);
+  //padding-bottom: 100px;
+
+   
   .progress {
     margin-bottom: 5px;
     .progress-bar {
-      background-color:#c5dbfc;
+      background-color:#bae5b5;
+      //height: 10px;
     }
     .day {
-      color:#7c7a8a;
+      //color:#7c7a8a;
+      float: right;
+      margin-right: 5px;
+      color:#ffffff;
     }
   }
 
@@ -131,6 +180,7 @@ table.table {
 }
 
 ul.meta-info {
+  margin-left: 0;
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -147,6 +197,7 @@ ul.meta-info {
     span.badge a, span.label a  {
       color:#ffffff;
       font-weight: 300;
+      text-transform: capitalize;
     }
   }
 }
