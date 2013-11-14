@@ -93,6 +93,16 @@ class Homework < ActiveRecord::Base
     rescue Exception
     false
   end
+
+  def percentage(n, d)
+    (n / d * 100).to_s + "%"
+  end
+
+  def rspec_score
+    {:passing => percentage(self.passes, self.examples),
+    :pending => percentage(self.pendings, self.examples),
+    :failing => percentage(self.failures, self.examples)}
+  end
   
   def github_username
     student.name

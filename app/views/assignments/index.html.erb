@@ -48,15 +48,21 @@
 
         </td>
         <td>
-          <span class="status">Not Started &raquo;</span> <a href="https://github.com/flatiron-school/flatiron-kitchen-ruby-003/fork" class="btn btn-default btn-sm" role="button">Fork</a>
-          <div class="progress">
-          <div class="progress-bar progress-bar-success" style="width:<%= @tests[i][:passing_percentage] %>">
+        <% hw = assignment.graded_homework_of(@student) %>
+        <% if hw %>
+          <%= render partial: "progress_bar", locals: {test_scores: hw.rspec_score} %>
+        <% else %>
+          <%= render partial: "fork_button", locals: {fork_assignment: assignment.fork_url} %>
+        <% end %>
+         <!--  <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width: 30%">
+            <span>5 Passing</span>
             </div>
-            <div class="progress-bar progress-bar-warning" style="width:<%= @tests[i][:pending_percentage] %>">
+            <div class="progress-bar progress-bar-warning" style="width:<%#= @tests[i][:pending_percentage] %>">
             </div>
-          <div class="progress-bar progress-bar-danger" style="width:<%= @tests[i][:failing_percentage] %>">
+          <div class="progress-bar progress-bar-danger" style="width:<%#= @tests[i][:failing_percentage] %>">
           </div>
-          <p>Passing:</p>
+          <p>Passing:</p>-->
         </td>
         <% @homework = Homework.where("assignment_id = ? AND student_id = ?", assignment.id, @student.id).first %>
         <td class="issues"><p><%= @homework.current_issue %><a href="#" class="btn btn-default btn-xs" role="button">New Issue</a></p>
