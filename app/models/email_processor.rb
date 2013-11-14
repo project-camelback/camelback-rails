@@ -20,7 +20,8 @@ class EmailProcessor < ActiveRecord::Base
       if subject_parse.match(/(The Plan)/)
          plan = Plan.new 
          plan.content = (string_parse.match(/^.(Day(\S|\s)+)^#|^(Day(\S|\s)+)^#/).to_s)
-         plan.date = (plan.content.match(/Day..\w|Day../).to_s)    
+         plan.date = (plan.content.match(/Day..\w|Day../).to_s)
+         plan.day_number = (plan.content.match(/(\d\d)|(\d)/)/[0].to_s).to_i
          plan.save
       end
 
