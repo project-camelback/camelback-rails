@@ -19,9 +19,14 @@
     </div>
   </div>
 </div>
-
-<p><%= GithubFeed.get_feed.title %></p>
-<p><%= GithubFeed.get_feed.url %></p>
+<div class="">
+   <% GithubFeed.get_feed.each do |entry| %>
+  <div class=""<%= entry.title %>>
+  <div class=""<%= entry.url %>>
+   <% end %>
+  </div>
+  </div>
+</div>
   <!-- <div class="progress-bar progress-bar-warning" style="width: 20%">
     <span class="sr-only">20% Complete (warning)</span>
   </div>
