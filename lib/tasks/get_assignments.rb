@@ -34,13 +34,14 @@ class GetAssignments
         :name => assignment.name,
         :full_name => assignment.full_name,
         :web_url => repo_url(assignment.full_name),
-        :github_created_at => assignment.created_at
+        :github_created_at => assignment.created_at,
+        :clone_url => assignment.rels[:ssh].href
         )
       puts "Saving #{assignment.name}."
       insert_forks(a)
-      Assignment.generate_tags(a)
       a.save
     end
+    Assignment.initial_generate_tags
   end
 
   def repo_url(full_name)

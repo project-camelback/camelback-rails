@@ -28,7 +28,45 @@ class Assignment < ActiveRecord::Base
 
   acts_as_taggable
 
+  # IN RAKE ASSIGNMENTS
+  # Assignment.all => clone
+  # parse readmes
+  # update database and cleanup
+
   DEFAULT_GENERATE_TAGS_LIST = ["todo", "lab", "homework", "quiz", "rails", "sinatra", "rack", "git"]
+
+  def self.initial_generate_tags
+    assignments = Assignment.all
+    clone_all(assignments)
+    assignments.each { |a| generate_tags(a) }
+    sleep 10
+    assignments.each { |a| FileUtils.rm_r(a.repo_path) }
+  end
+
+  def self.clone_all(assignments)
+    assignments.each do |asst|
+      asst.clone
+    end
+    puts "System is cloning. Wait three minutes."
+    sleep 180
+  end
+
+  def clone
+    puts "  Cloning #{self.name}... "
+    system(cloner)
+  end
+
+  def cloner
+    "bash bin/cloner.sh %s %s &> /dev/null &" % [self.name, self.url]
+  end
+
+  def url
+    clone_url
+  end
+
+  def repo_path
+    "tmp/#{self.name}"
+  end
 
   def self.generate_tags(assignment)
     tags_array = tags_from_readme(assignment)
@@ -40,10 +78,10 @@ class Assignment < ActiveRecord::Base
 
   def self.tags_from_readme(assignment)
     tags = []
-    file = File.open('/tmp/githubname/README.md')
+    file = File.open("#{assignment.repo_path}/README.md")
       file.each_line do |line|
         unless line.match(/^tags: ([\S ]+)/).nil?
-          return line.match(/^tags: ([\S ]+)/)[1]
+          tags = line.match(/^tags: ([\S ]+)/)[1]
         end
       end
     tags.split(", ")
@@ -54,17 +92,6 @@ class Assignment < ActiveRecord::Base
 
   def branch
     "master" # see Homework.rb grader_command
-  end
-
-  def pull_submissions
-    github_fork = GithubForks.new(self.url)
-    github_fork.get_forks.each do |fork|
-      student = Student.find_or_create(:github_username => fork[:github_username])
-      student.update(:avatar_url => fork[:avatar_url])
-      unless AssignmentSubmission.find(:student => student, :assignment => self)
-        self.add_assignment_submission(:url => fork[:url], :student => student)
-      end
-    end
   end
 
 end
