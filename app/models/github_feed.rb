@@ -6,7 +6,7 @@ class GithubFeed < ActiveRecord::Base
 
   def self.get_feed
     feed = define_feed
-    feed.entries.take(4)
+    feed.entries.take(3)
     #binding.pry
   end
 
