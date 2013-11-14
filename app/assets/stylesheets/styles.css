@@ -7653,7 +7653,6 @@ html, body {
   border-radius: 6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
-  padding-bottom: 100px;
 }
 /* line 97, ../sass/styles.scss */
 .time-line .progress {
