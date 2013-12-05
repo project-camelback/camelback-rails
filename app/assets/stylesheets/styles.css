@@ -7570,29 +7570,29 @@ td.visible-print {
     display: none !important;
   }
 }
-/* line 12, ../sass/styles.scss */
+/* line 14, ../sass/styles.scss */
 .container-top-padding {
   padding-top: 65px;
 }
 
-/* line 19, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 .nav-btn-group {
   margin-left: 10px;
   margin-top: 10px;
   font-size: smaller;
 }
-/* line 24, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 .nav-btn-group .navbar-form {
   margin-top: -1px;
   margin-left: 10px;
 }
-/* line 28, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 .nav-btn-group .navbar-form input {
   font-size: 14px;
   padding: 0px 8px;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .user-info .gravatar {
   margin-right: 3px;
   -webkit-border-radius: 4px;
@@ -7603,7 +7603,15 @@ td.visible-print {
 }
 
 /* line 48, ../sass/styles.scss */
-.time-line {
+.empty-cell {
+  width: 100%;
+  padding-left: 20%;
+  font-size: 9px;
+  color: #b1b4b0;
+}
+
+/* line 57, ../sass/styles.scss */
+.feed {
   padding: 5px 10px;
   background-color: #fcfbf9;
   -webkit-border-radius: 6px;
@@ -7614,41 +7622,73 @@ td.visible-print {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
 }
-/* line 56, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
+.feed h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #b1b4b0;
+}
+/* line 74, ../sass/styles.scss */
+.feed p {
+  border-top: 1px solid #ebe3e1;
+  padding-top: 4px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+  font-size: 11px;
+}
+
+/* line 90, ../sass/styles.scss */
+.time-line {
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  background-color: #fcfbf9;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset;
+}
+/* line 101, ../sass/styles.scss */
 .time-line .progress {
   margin-bottom: 5px;
 }
-/* line 58, ../sass/styles.scss */
+/* line 103, ../sass/styles.scss */
 .time-line .progress .progress-bar {
-  background-color: #c5dbfc;
+  background-color: #bae5b5;
 }
-/* line 61, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 .time-line .progress .day {
-  color: #7c7a8a;
+  float: right;
+  margin-right: 5px;
+  color: #ffffff;
 }
-/* line 66, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 .time-line .plan-4-day {
   margin-bottom: 5px;
 }
-/* line 69, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .time-line .plan-4-day h2 {
   display: inline;
   margin-top: 0;
   font-size: 14px;
   color: #b1b4b0;
 }
-/* line 76, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .time-line .plan-4-day p {
   color: #b1b4b0;
   display: inline;
 }
-/* line 81, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 .time-line .plan-4-day ol {
   margin-left: 10px;
   display: inline;
   padding-left: 0;
 }
-/* line 86, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .time-line .plan-4-day ol li {
   font-size: 12px;
   margin-right: 10px;
@@ -7656,63 +7696,65 @@ td.visible-print {
   display: inline;
 }
 
-/* line 101, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 table.table thead th {
   color: #b1b4b0;
   font-weight: 300;
 }
-/* line 107, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 table.table tbody td {
   vertical-align: middle;
 }
-/* line 109, ../sass/styles.scss */
+/* line 158, ../sass/styles.scss */
 table.table tbody td .progress {
   margin-bottom: 0;
 }
 
-/* line 117, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .assignments-list h2 {
   font-size: 20px;
   margin-top: 4px;
   margin-bottom: 2px;
 }
 
-/* line 123, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 .table-top-padding {
   padding-top: 20px;
 }
 
-/* line 126, ../sass/styles.scss */
+/* line 175, ../sass/styles.scss */
 .issue {
   color: #b4b1ab;
   font-size: 10px;
   line-height: 3px;
 }
 
-/* line 133, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 ul.meta-info {
+  margin-left: 0;
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 138, ../sass/styles.scss */
+/* line 188, ../sass/styles.scss */
 ul.meta-info li {
   display: inline;
   font-size: 10px;
   color: #b1b4b0;
   margin-right: 3px;
 }
-/* line 144, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 ul.meta-info li a {
   color: #b1b4b0;
 }
-/* line 147, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #ffffff;
   font-weight: 300;
+  text-transform: capitalize;
 }
 
-/* line 154, ../sass/styles.scss */
+/* line 205, ../sass/styles.scss */
 .editable_area {
   padding: 5px;
   border: 1px solid #e8ebeb;
@@ -7724,30 +7766,30 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   color: #b1b4b0;
   font-size: 10px;
 }
-/* line 161, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 .editable_area:hover {
   cursor: pointer;
   background-color: #f2f5f5;
 }
 
-/* line 167, ../sass/styles.scss */
+/* line 218, ../sass/styles.scss */
 .status {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 172, ../sass/styles.scss */
+/* line 223, ../sass/styles.scss */
 .align-middle {
   vertical-align: middle;
 }
 
-/* line 178, ../sass/styles.scss */
+/* line 229, ../sass/styles.scss */
 .issues {
   color: #b1b4b0;
   font-size: 12px;
 }
 
-/* line 187, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 .centered {
   position: fixed;
   top: 40%;
@@ -7757,12 +7799,12 @@ ul.meta-info li span.badge a, ul.meta-info li span.label a {
   text-align: center;
 }
 
-/* line 195, ../sass/styles.scss */
+/* line 246, ../sass/styles.scss */
 .login-button {
   max-width: 200px;
 }
 
-/* line 202, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 .gravatar {
   height: 20px;
   -webkit-border-radius: 4px;

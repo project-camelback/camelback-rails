@@ -64,7 +64,7 @@ class Homework < ActiveRecord::Base
         elsif issues_are_empty?(repo)
           homework.current_issue = "Currently no issues."
         else
-          homework.current_issue = "To use this feature, enable issues in this repo's settings."
+          homework.current_issue = "Enable repo issue to access this feature."
         end
         homework.save 
       end

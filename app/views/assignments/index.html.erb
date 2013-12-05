@@ -1,93 +1,85 @@
 <div class="row">
-  <div class="col-lg-12">
+  <div class="col-md-8  timeline-column">
     <div class="time-line">
-      <% if @plan %>
       <div class="plan-4-day">
-        <h2>The Plan: <%= @plan.date %></h2> <p><%= @plan.content %> </p>
-      </div>
-
-      <div class="course-timeline">
-        <div class="progress">
-          <div class="progress-bar" style="width: <%= @percent %>%">
-            <span class="day">Day: <%= @plan.day_number %></span>
+        <% if @plan %>
+          <h2>Plan for Day <%= @plan.day_number %>:</h2> <p><%= @plan.content %> </p>
+          <div class="course-timeline">
+            <div class="progress">
+              <div class="progress-bar" style="width: <%= @percent %>%">
+                <span class="day">Day: <%= @plan.day_number %></span>
+              </div>
+            </div>
           </div>
-        </div>
+        <% else %>
+          <h2>Plan for the day: No Plan. Do whatever.</h2>
+        <% end %>
       </div>
-      <% else %>
-        <h2>No Plan. Do whatever.</h2>
+    </div>
+  </div><!-- end col 1 -->
+  <div class="col-md-4  equal-height"> 
+    <div class="feed equal-height">
+    <h2>Live from Github...</h2>
+      <% GithubFeed.get_feed.each do |entry| %>
+       <p><a href="<%= entry.url %>" title=""><%= entry.title[0..60] %>...</a></p>
       <% end %>
     </div>
-  </div>
+  </div><!-- end col 2 -->
 </div>
-
-<p><%= GithubFeed.get_feed.title %></p>
-<p><%= GithubFeed.get_feed.url %></p>
-  <!-- <div class="progress-bar progress-bar-warning" style="width: 20%">
-    <span class="sr-only">20% Complete (warning)</span>
-  </div>
-  <div class="progress-bar progress-bar-danger" style="width: 10%">
-    <span class="sr-only">10% Complete (danger)</span>
-  </div> -->
 
 <div class="row table-top-padding">
   <div class="col-lg-12">
     <table class="table table-striped assignments-list">
-      <thead>
-      <tr>
-        <th width="15">Rspec</th>
-        <th width="165">Assignment</th>
-        <th width="100">Progress</th>
-        <th width="234"><!-- Issues --><span class="glyphicon glyphicon-comment"></span></th>
-      </tr>
-      </thead>
-      <tbody>
-      <% @student.assignments.each_with_index do |assignment,i| %>
-      <tr>
-        <td width="15">
-          <% if assignment.spec_present %>
-            <%= form_tag '/homeworks/rspec' do %>
-              <input name="assignment_id" value="<%= assignment.id %>" type="hidden" />
-              <input name="student_id" value="<%= @student.id %>" type="hidden" />
-              <button type="submit" class="btn btn-info btn-small"><i class="icon-bar-chart"></i></button>
-            <% end %>
-          <% end %>
-        </td>
-        <td width="165"><h2><%= link_to assignment.name, assignment.web_url %></h2>
-          <ul class="meta-info">
-            <% unless assignment.tags.empty? %>
-              <% assignment.tags.each do |tag| %>
+        <thead>
+          <tr>
+            <th width="15">Rspec</th>
+            <th width="165">Assignment</th>
+            <th width="100">Progress</th>
+            <th width="234">Issues<!-- Issues <span class="glyphicon glyphicon-comment"></span>--></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @student.assignments.each_with_index do |assignment,i| %>
+          <tr>
+            <td width="15">
+              <% if assignment.spec_present %>
+                <%= form_tag '/homeworks/rspec' do %>
+                <input name="assignment_id" value="<%= assignment.id %>" type="hidden" />
+                <input name="student_id" value="<%= @student.id %>" type="hidden" />
+                <button type="submit" class="btn btn-default btn-xs"><span class="icon-bar-chart"></span></button>
+                  <% end %>
+              <% else %>
+              <p class="empty-cell">--</p>
+              <% end %>
+            </td>
+            <td width="165"><h2><%= link_to assignment.name, assignment.web_url %></h2>
+              <ul class="meta-info">
+                <% unless assignment.tags.empty? %>
+                <% assignment.tags.each do |tag| %>
                 <li><span class="label label-default">
                   <span class="glyphicon glyphicon-tag"></span>&nbsp;<a href="#" title=""><%= tag.name %></a></span>
                 </li>
-              <% end %>
-            <% end %>
+                <% end %>
+                <% end %>
 
-          </ul>
-        </td>
-        <td>
-          <% hw = assignment.graded_homework_of(@student) %>
-          <% if hw %>
-            <%= render partial: "progress_bar", locals: {test_scores: hw.rspec_score} %>
-          <% else %>
-            <%= render partial: "fork_button", locals: {fork_assignment: assignment.fork_url} %>
-          <% end %>
-          <!--  <div class="progress">
-          <div class="progress-bar progress-bar-success" style="width: 30%">
-            <span>5 Passing</span>
-            </div>
-            <div class="progress-bar progress-bar-warning" style="width:<%#= @tests[i][:pending_percentage] %>">
-            </div>
-          <div class="progress-bar progress-bar-danger" style="width:<%#= @tests[i][:failing_percentage] %>">
-          </div>
-          <p>Passing:</p> -->
+              </ul>
+            </td>
+            <td>
+              <% hw = assignment.graded_homework_of(@student) %>
+              <% if hw %>
+              <%= render partial: "progress_bar", locals: {test_scores: hw.rspec_score} %>
+              <% else %>
+              <%= render partial: "fork_button", locals: {fork_assignment: assignment.fork_url} %>
+              <% end %>
         </td>
         <td class="issues">
           <% @homework = Homework.where("assignment_id = ? AND student_id = ?", assignment.id, @student.id).first %>
-          <p><%= @homework.current_issue %><a href="#" class="btn btn-default btn-xs" role="button">New Issue</a></p>
+          <p><%= @homework.current_issue %> <button type="button" class="btn btn-default btn-xs">New Issue</button> 
+          <!-- <a href="#" class="btn btn-default btn-xs" role="button">New Issue</a> --></p>
         </td>
       </tr>
       <% end %>
-      </tbody>
-    </table>
-  </div> <!-- col-lg-12 -->
+    </tbody>
+  </table>
+</div> <!-- col-lg-12 -->
 </div> <!-- row table-top-padding -->
