@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   # end
 
   def callback
-    get temporary GitHub code...
+    # get temporary GitHub code...
     session_code = request.env['rack.request.query_hash']["code"]
 
     result = RestClient.post("https://github.com/login/oauth/access_token",
