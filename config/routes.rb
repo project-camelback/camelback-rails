@@ -11,7 +11,7 @@ WebAppRails::Application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure' => redirect('/')
   get '/signin' => redirect('/auth/github')
-  #get '/signout', to: 'sessions#destroy', as: :signout
+  # get '/signout', to: 'sessions#destroy', as: :signout
 
   post '/homeworks/rspec', to: 'homeworks#rspec'
 

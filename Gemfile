@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 # Heroku demands ruby 2.0.0
 ruby "2.0.0"
 
-gem 'pg'
+# gem 'pg'
 gem 'rails', '4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -24,7 +24,6 @@ group :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'annotate', ">=2.5.0" 
-  gem 'pg'
   #gem "compass-rails",  github: "milgner/compass-rails", branch: 'rails4'
 end
 
@@ -37,10 +36,12 @@ group :test do
   gem 'awesome_print'
 end
 
-group :production do
-  gem 'rails_12factor'
-  gem 'pg' # Use PostgreSQL. Heroku requires it
-end
+gem 'sqlite3'
+
+# group :production do
+#   gem 'rails_12factor'
+#   gem 'pg' # Use PostgreSQL. Heroku requires it
+# end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
